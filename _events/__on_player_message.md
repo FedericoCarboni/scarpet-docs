@@ -1,8 +1,7 @@
 ---
-params: [
-  "player",
-  "message"
-]
-# name: "__on_player_message"
+params:
+  - name: player
+  - name: message
 ---
+
 Triggered when a player sends a chat message.

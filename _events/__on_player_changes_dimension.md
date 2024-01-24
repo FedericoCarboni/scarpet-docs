@@ -1,13 +1,12 @@
 ---
-params: [
-  "player",
-  "from_pos",
-  "from_dimension",
-  "to_pos",
-  "to_dimension"
-]
-# name: "__on_player_changes_dimension"
+params:
+  - name: player
+  - name: from_pos
+  - name: from_dimension
+  - name: to_pos
+  - name: to_dimension
 ---
+
 Called when a player moves from one dimension to another. Event is handled still when the player is in its previous
 dimension and position.
 

@@ -1,11 +1,10 @@
 ---
-params: [
-  "player",
-  "item_tuple",
-  "hand"
-]
-# name: "__on_player_uses_item"
+params:
+  - name: player
+  - name: item_tuple
+  - name: hand
 ---
+
 Triggers with a right click action. Event is triggered right after a server receives the packet, before the
 game manages to do anything about it. Event triggers when player starts eating food, or starts drawing a bow.
 Use `player_finishes_using_item`, or `player_releases_item` to capture the end of these events.

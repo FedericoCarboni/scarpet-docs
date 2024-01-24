@@ -1,7 +1,6 @@
 ---
-params: [
-  "player"
-]
-# name: "__on_player_stops_sprinting"
+params:
+  - name: player
 ---
+
 Four events triggered when player controls for sneaking and sprinting toggle.
