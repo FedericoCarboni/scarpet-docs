@@ -2,6 +2,9 @@
 signatures:
   - params:
       - name: block
+  - params:
+      - name: block
+      - name: property
 ---
 
 , `block_state(block, property)`
