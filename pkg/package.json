@@ -1,0 +1,16 @@
+{
+  "name": "pkg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "genData": "node scripts/genData.js"
+  },
+  "keywords": [],
+  "author": "Federico Carboni",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}

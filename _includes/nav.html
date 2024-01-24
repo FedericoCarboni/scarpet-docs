@@ -1,0 +1,122 @@
+<div class="accordion" id="content-nav-accordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="constants-header">
+      <button
+        class="accordion-button collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#constants-collapse"
+        aria-expanded="true"
+        aria-controls="constants-collapse"
+      >
+        Constants
+      </button>
+    </h2>
+    <div
+      class="accordion-collapse collapse"
+      id="constants-collapse"
+      aria-labelledby="constants-header"
+      data-bs-parent="#content-nav-accordion"
+    >
+      <nav class="nav flex-column">
+        {% for el in site.constants %}
+        <a
+          class="nav-link{% if el.title == page.title %} active{% endif %}"
+          href="{{ el.url | relative_url }}"
+        >
+          <code>{{ el.title | downcase }}</code>
+        </a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="control-flow-header">
+      <button
+        class="accordion-button collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#control-flow-collapse"
+        aria-expanded="true"
+        aria-controls="control-flow-collapse"
+      >
+        Control Flow
+      </button>
+    </h2>
+    <div
+      class="accordion-collapse collapse"
+      id="control-flow-collapse"
+      aria-labelledby="control-flow-header"
+      data-bs-parent="#content-nav-accordion"
+    >
+      <nav class="nav flex-column">
+        {% for el in site.control-flow %}
+        <a
+          class="nav-link{% if el.title == page.title %} active{% endif %}"
+          href="{{ el.url | relative_url }}"
+        >
+          <code>{{ el.title | downcase }}</code>
+        </a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="functions-header">
+      <button
+        class="accordion-button collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#functions-collapse"
+        aria-expanded="true"
+        aria-controls="functions-collapse"
+      >
+        Functions
+      </button>
+    </h2>
+    <div
+      class="accordion-collapse collapse"
+      id="functions-collapse"
+      aria-labelledby="functions-header"
+      data-bs-parent="#content-nav-accordion"
+    >
+      <nav class="nav flex-column">
+        {% for el in site.functions %}
+        <a
+          class="nav-link{% if el.title == page.title %} active{% endif %}"
+          href="{{ el.url | relative_url }}"
+        >
+          <code>{{ el.title | downcase }}</code>
+        </a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="arithmetic-header">
+      <button
+        class="accordion-button collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#arithmetic-collapse"
+        aria-expanded="true"
+        aria-controls="arithmetic-collapse"
+      >
+        Arithmetic
+      </button>
+    </h2>
+    <div
+      class="accordion-collapse collapse"
+      id="arithmetic-collapse"
+      aria-labelledby="arithmetic-header"
+      data-bs-parent="#content-nav-accordion"
+    >
+      <nav class="nav flex-column">
+        {% for el in site.arithmetic %}
+        <a
+          class="nav-link{% if el.title == page.title %} active{% endif %}"
+          href="{{ el.url | relative_url }}"
+        >
+          <code>{{ el.title | downcase }}</code>
+        </a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+</div>
