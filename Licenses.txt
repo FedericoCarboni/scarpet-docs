@@ -1,8 +1,7 @@
 <https://github.com/gnembon/fabric-carpet>
 
-Files under _minecraft and _events are based on the upstream scarpet
-documentation found in the fabric-carpet repository, licensed under the MIT
-license.
+Documentation in markdown files is based on the upstream scarpet documentation
+found in the fabric-carpet repository, licensed under the MIT license.
 
 MIT License
 
