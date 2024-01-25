@@ -1,0 +1,123 @@
+// This file defines our configuration for Markdownlint. See
+// https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+// for more details on each rule.
+
+{
+  "default": true,
+  "first-line-heading": false,
+  // Disabled, as some callouts include headings.
+  "heading-increment": false,
+  "ul-style": {
+    "style": "dash",
+  },
+  "ul-indent": {
+    "indent": 2,
+  },
+  "no-hard-tabs": {
+    "spaces_per_tab": 2,
+  },
+  "line-length": false,
+  "no-duplicate-heading": {
+    "siblings_only": true,
+  },
+  "single-title": {
+    "front_matter_title": "^\\s*title\\s*[:=]",
+  },
+  "no-trailing-punctuation": {
+    "punctuation": ".,;:",
+  },
+  // Consecutive Notes/Callouts currently don't conform with this rule
+  "no-blanks-blockquote": false,
+  // Force ordered numbering to catch accidental list ending from indenting
+  "ol-prefix": {
+    "style": "ordered",
+  },
+  "no-inline-html": {
+    "allowed_elements": [
+      "a",
+      "abbr",
+      "annotation",
+      "br",
+      "caption",
+      "code",
+      "col",
+      "colgroup",
+      "dd",
+      "details",
+      "div",
+      "dl",
+      "dt",
+      "em",
+      "h4",
+      "h5",
+      "img",
+      "kbd",
+      "li",
+      "math",
+      "menclose",
+      "mfenced",
+      "mfrac",
+      "mfrac",
+      "mi",
+      "mmultiscripts",
+      "mn",
+      "mo",
+      "mover",
+      "mphantom",
+      "mprescripts",
+      "mroot",
+      "mrow",
+      "ms",
+      "mspace",
+      "mspace",
+      "msqrt",
+      "mstyle",
+      "msub",
+      "msubsup",
+      "msup",
+      "mtable",
+      "mtd",
+      "mtext",
+      "mtr",
+      "munder",
+      "munderover",
+      "none",
+      "ol",
+      "p",
+      "pre",
+      "q",
+      "section",
+      "semantics",
+      "strong",
+      "sub",
+      "summary",
+      "sup",
+      "table",
+      "tbody",
+      "td",
+      "tfoot",
+      "th",
+      "thead",
+      "tr",
+      "ul",
+      "var",
+    ],
+  },
+  "no-bare-urls": true,
+  // Produces too many true positives
+  "no-space-in-emphasis": true,
+  "fenced-code-language": true,
+  // See https://github.com/mdn/content/pull/20026, as macros currently break this
+  "no-empty-links": true,
+  "code-block-style": {
+    "style": "fenced",
+  },
+  "emphasis-style": {
+    "style": "underscore",
+  },
+  "strong-style": {
+    "style": "asterisk",
+  },
+  // Disabled, as yari generates link fragments by replacing spaces with underscores, not dashes.
+  "link-fragments": true,
+}
