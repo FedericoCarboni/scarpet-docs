@@ -6,7 +6,7 @@ signatures:
 
 Returns a numeric context of the expression. Can be used to read numbers from strings, or other types
 
-<pre>
+```scarpet
 number(null) => 0
 number(false) => 0
 number(true) => 1
@@ -17,4 +17,4 @@ number(['']) => 1
 number('foo') => null
 number('3bar') => null
 number('2')+number('2') => 4
-</pre>
+```
