@@ -12,6 +12,7 @@ A `return()` marks the end of an execution path in a function:
 ```scarpet
 foo() -> (
     return(2);
+    print('x'); // not reachable
 );
 ```
 

@@ -2,12 +2,16 @@
 title: if
 signatures:
   - params:
-    - name: condition
-    - name: if_true
+      - name: condition
+      - name: if_true
   - params:
-    - name: condition
-    - name: if_true
-    - name: if_false
+      - name: condition
+      - name: if_true
+      - name: if_false
+  - params:
+      - name: condition
+      - name: if_true
+      - rest: true
 ---
 
 Evaluate an expression if a condition holds.
