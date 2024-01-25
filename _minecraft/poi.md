@@ -24,9 +24,9 @@ The return format of the results is a list of poi type, occupancy load, and extr
 Querying for POIs using the radius is the intended use of POI mechanics, and the ability of accessing individual POIs
 via `poi(pos)` in only provided for completeness.
 
-<pre>
+```scarpet
 poi(x,y,z) => null  // nothing set at position
 poi(x,y,z) => ['meeting',3]  // its a bell-type meeting point occupied by 3 villagers
 poi(x,y,z,5) => []  // nothing around
 poi(x,y,z,5) => [['nether_portal',0,[7,8,9]],['nether_portal',0,[7,9,9]]] // two portal blocks in the range
-</pre>
+```

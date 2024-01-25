@@ -11,7 +11,7 @@ signatures:
 Attaches specific function from the current package to be called upon the `event`, with extra `args` carried to the
 original required arguments for the event handler.
 
-<pre>
+```scarpet
 protect_villager(entity, amount, source, source_entity, healing_player) ->
 (
    if(source_entity && source_entity~'type' != 'player',
@@ -26,7 +26,7 @@ __on_player_interacts_with_entity(player, entity, hand) ->
       entity_event(entity, 'on_damage', 'protect_villager', player~'name')
    )
 )
-</pre>
+```
 
 In this case this will protect a villager from entity damage (zombies, etc.) except from players by granting all the
 health back to the villager after being harmed.

@@ -22,7 +22,7 @@ back in state definition in various applications where block properties are requ
 
 Throws `unknown_block` if the provided input is not valid.
 
-<pre>
+```scarpet
 set(x,y,z,'iron_block'); block_state(x,y,z)  => {}
 set(x,y,z,'iron_trapdoor','half','top'); block_state(x,y,z)  => {waterlogged: false, half: top, open: false, ...}
 set(x,y,z,'iron_trapdoor','half','top'); block_state(x,y,z,'half')  => top
@@ -31,4 +31,4 @@ set(x,y,z,'air'); block_state(x,y,z,'half')  => null
 block_state(block('iron_trapdoor[half=top]'),'half')  => top
 block_state(block('iron_trapdoor[half=top]'),'powered')  => false
 bool(block_state(block('iron_trapdoor[half=top]'),'powered'))  => 0
-</pre>
+```

@@ -23,10 +23,10 @@ successful, false otherwise.
 
 Throws `unknown_item` if `item` doesn't exist
 
-<pre>
+```scarpet
 place_item('stone',x,y,z) // places a stone block on x,y,z block
 place_item('piston,x,y,z,'down') // places a piston facing down
 place_item('carrot',x,y,z) // attempts to plant a carrot plant. Returns true if could place carrots at that position.
 place_item('bone_meal',x,y,z) // attempts to bonemeal the ground.
 place_item('wooden_axe',x,y,z) // attempts to strip the log.
-</pre>
+```

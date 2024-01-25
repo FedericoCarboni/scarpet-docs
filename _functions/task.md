@@ -15,13 +15,13 @@ name, or value. `executor` identifier in `task_thread`, places the task in a spe
 The default thread value is the `null` thread. There are no limits on number of parallel tasks for any executor,
 so using different queues is solely for synchronization purposes.
 
-<pre>
+```scarpet
 task( _() -> print('Hello Other World') )  => Runs print command on a separate thread
 foo(a, b) -> print(a+b); task('foo',2,2)  => Uses existing function definition to start a task
 task_thread('temp', 'foo',3,5);  => runs function foo with a different thread executor, identified as 'temp'
 a = 3; task_thread('temp', _(outer(a), b) -> foo(a,b), 5)
     => Another example of running the same thing passing arguments using closure over anonymous function as well as passing a parameter.
-</pre>
+```
 
 In case you want to create a task based on a function that is not defined in your module, please read the tips on
  "Passing function references to other modules of your application" section in the `call(...)` section.

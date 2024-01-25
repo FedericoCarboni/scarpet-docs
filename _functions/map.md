@@ -11,7 +11,7 @@ where `_` is passed as each element of the list, and `_i` is the index of such e
 map returns whatever collected thus far. If `continue` and `break` are used with supplied argument, it is used in
 place of the resulting map element, otherwise current element is skipped.
 
-<pre>
+```scarpet
 map(range(10), _*_)  => [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 map(player('*'), _+' is stoopid') [gnembon is stoopid, herobrine is stoopid]
-</pre>
+```

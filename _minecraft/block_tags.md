@@ -16,10 +16,10 @@ to this tag, and `true` if the block belongs to the tag.
 
 Throws `unknown_block` if `block` doesn't exist
 
-<pre>
+```scarpet
 block_tags() => [geode_invalid_blocks, wall_post_override, ice, wooden_stairs, bamboo_blocks, stone_bricks... ]
 block_tags('iron_block') => [mineable/pickaxe, needs_stone_tool, beacon_base_blocks]
 block_tags('glass') => [impermeable]
 block_tags('glass', 'impermeable') => true
 block_tags('glass', 'beacon_base_blocks') => false
-</pre>
+```

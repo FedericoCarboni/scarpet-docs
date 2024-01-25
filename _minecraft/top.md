@@ -14,7 +14,7 @@ heightmap specified by `type`. Valid options are:
 *   `ocean_floor`: topmost non-water block
 *   `surface`: topmost surface block
 
-<pre>
+```scarpet
 top('motion', x, y, z)  => 63
 top('ocean_floor', x, y, z)  => 41
-</pre>
+```

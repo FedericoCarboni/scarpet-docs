@@ -39,8 +39,8 @@ Also note that some recipes leave some products in the crafting window, and thes
  `crafting_remaining_item()` function
 
  Examples:
- <pre>
+ ```scarpet
  recipe_data('iron_ingot_from_nuggets')
  recipe_data('iron_ingot')
  recipe_data('glass', 'smelting')
- </pre>
+ ```

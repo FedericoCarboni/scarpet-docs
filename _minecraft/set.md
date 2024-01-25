@@ -25,7 +25,7 @@ The returned value is either the block state that has been set, or `false` if bl
 
 Throws `unknown_block` if provided block to set is not valid
 
-<pre>
+```scarpet
 set(0,5,0,'bedrock')  => bedrock
 set([0,5,0], 'bedrock')  => bedrock
 set(block(0,5,0), 'bedrock')  => bedrock
@@ -48,4 +48,4 @@ set(x,y,z, block('iron_trapdoor[half=top]')) // also correct, block() provides e
 
 set(x,y,z,'hopper[facing=north]{Items:[{Slot:1b,id:"minecraft:slime_ball",Count:16b}]}') // extra block data
 set(x,y,z,'hopper', {'facing' -> 'north'}, nbt('{Items:[{Slot:1b,id:"minecraft:slime_ball",Count:16b}]}') ) // same
-</pre>
+```

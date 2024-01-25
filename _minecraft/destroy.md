@@ -26,7 +26,7 @@ Throws `unknown_item` if `tool` doesn't exist.
 Here is a sample code that can be used to mine blocks using items in player inventory, without using player context
 for mining. Obviously, in this case the use of `harvest` would be much more applicable:
 
-<pre>
+```scarpet
 mine(x,y,z) ->
 (
   p = player();
@@ -52,4 +52,4 @@ mine(x,y,z) ->
   );
   print('How did we get here?');
 )
-</pre>
+```

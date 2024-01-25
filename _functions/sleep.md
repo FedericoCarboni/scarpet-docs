@@ -17,7 +17,7 @@ Since `close_expr` is executed after app shutdown is initiated, you won't be abl
 should periodically call `sleep` to ensure all app tasks will finish when the app is closing or right after, but the app engine
 will not forcefully remove your running tasks, so the tasks themselves need to properly react to the closing request.
 
-<pre>
+```scarpet
 sleep(50)  # wait for 50 milliseconds
 sleep(1000, print('Interrupted')) # waits for 1 second, outputs a message when thread is shut down.
-</pre>
+```

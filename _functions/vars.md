@@ -8,7 +8,7 @@ It returns all names of variables from local scope (if prefix does not start wit
 (otherwise). Here is a larger example that uses combination of `vars` and `var` functions to be
 used for object counting
 
-<pre>
+```scarpet
 /script run
 $ count_blocks(ent) -> (
 $   [cx, cy, cz] = query(ent, 'pos');
@@ -18,4 +18,4 @@ $     print(str( '%s: %d', slice(_,6), var(_) ))
 $   )
 $ )
 /script run count_blocks(player())
-</pre>
+```

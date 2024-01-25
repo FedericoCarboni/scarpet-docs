@@ -7,7 +7,7 @@ signatures:
 Returns the size of the inventory for the entity or block in question. Returns null if the block or entity don't
 have an inventory.
 
-<pre>
+```scarpet
 inventory_size(player()) => 41
 inventory_size('enderchest', player()) => 27 // enderchest
 inventory_size('equipment', player()) => 6 // equipment
@@ -25,4 +25,4 @@ creeper = spawn('creeper', x, y, z);
 inventory_size(creeper); => 6 // default creeper inventory is equipment since it has no other
 inventory_size('equipment', creeper); => 6 // unused horse equipment inventory
 inventory_size(null, creeper); => 6 // creeper default is its equipment
-</pre>
+```

@@ -20,9 +20,9 @@ On top of that, scarpet provides the following list of noises sampled directly f
 `'temperature'`, `'vegetation'`, `'continents'`, `'erosion'`, `'depth'`, `'ridges'`,
 `'initial_density_without_jaggedness'`, `'final_density'`, `'vein_toggle'`, `'vein_ridged'` and `'vein_gap'`
 
-<pre>
+```scarpet
 // requesting single value
 sample_density(pos, 'continents') => 0.211626790923
 // passing type as multiple arguments
 sample_density(pos, 'continents', 'depth', 'overworld/caves/pillars', 'mydatapack:foo/my_function') => [-0.205013844481, 1.04772473438, 0.211626790923, 0.123]
-</pre>
+```

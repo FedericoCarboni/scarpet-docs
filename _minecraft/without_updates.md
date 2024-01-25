@@ -13,7 +13,7 @@ Consider following scenario: We would like to generate a bunch of terrain in a f
 generator. The following code causes a cascading effect as blocks placed on chunk borders will cause other chunks to get
 loaded to full, thus generated:
 
-<pre>
+```scarpet
 __config() -> {'scope' -> 'global'};
 __on_chunk_generated(x, z) -> (
   scan(x,0,z,0,0,0,15,15,15,
@@ -22,11 +22,11 @@ __on_chunk_generated(x, z) -> (
     )
   )
 )
-</pre>
+```
 
 The following addition resolves this issue, by not allowing block updates past chunk borders:
 
-<pre>
+```scarpet
 __config() -> {'scope' -> 'global'};
 __on_chunk_generated(x, z) -> (
   without_updates(
@@ -37,4 +37,4 @@ __on_chunk_generated(x, z) -> (
     )
   )
 )
-</pre>
+```

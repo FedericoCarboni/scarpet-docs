@@ -14,11 +14,11 @@ If seed is provided, each consecutive call to rand() will act like 'next' call t
 same random object. Scarpet keeps track of up to 65536 custom random number generators (custom seeds, per app),
 so if you exceed this number, your random sequences will revert to the beginning and start over.
 
-<pre>
+```scarpet
 map(range(10), floor(rand(10))) => [5, 8, 0, 6, 9, 3, 9, 9, 1, 8]
 map(range(10), bool(rand(2))) => [false, false, true, false, false, false, true, false, true, false]
 map(range(10), str('%.1f',rand(_))) => [0.0, 0.4, 0.6, 1.9, 2.8, 3.8, 5.3, 2.2, 1.6, 5.6]
-</pre>
+```
 
 ## `reset_seed(seed)`
 
