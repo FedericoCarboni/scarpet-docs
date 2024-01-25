@@ -24,6 +24,6 @@ Prism.languages.scarpet = {
       /(^|[^.])(?:->|&&|<>|\|\||::|[?:~]|[+*/%^!=<>]|\+=?)/m,
     lookbehind: true,
   },
-  variable: /\b(global_\w+|_i|_x|_y|_z|_trace|_)/,
-  punctuation: /[{}[\];(),.:]/,
+  variable: /\b(global_\w+|_a|_i|_x|_y|_z|_trace|_)/,
+  punctuation: /[{}[\];(),.:~]/,
 };
