@@ -1,11 +1,11 @@
 ---
 signatures:
   - params:
-      - name: descriptordescriptors
+      - name: descriptor
       - name: function
+      - name: args
+        rest: true
 ---
-
-, `entity_load_handler(descriptor / descriptors, call_name, ... args?)`
 
 Attaches a callback to trigger when any entity matching the following type / types is loaded in the game, allowing to grab a handle
 to an entity right when it is loaded to the world without querying them every tick. Callback expects two parameters - the entity,
@@ -18,7 +18,7 @@ of the currently targeted entity types pool.
 Like other global events, calls to `entity_load_handler` should only be attached in apps with global scope. For player scope apps,
 it will be called multiple times, once for each player. That's likely not what you want to do.
 
-```
+```scarpet
 // veryfast method of getting rid of all the zombies. Callback is so early, its packets haven't reached yet the clients
 // so to save on log errors, removal of mobs needs to be scheduled for later.
 entity_load_handler('zombie', _(e, new) -> schedule(0, _(outer(e)) -> modify(e, 'remove')))
@@ -40,22 +40,30 @@ internally (vanilla limitation), so some modifications to these entities may hav
 world generation.
 
 For instance the following handler is safe, as it only accesses the entity directly. It makes all spawned pigmen jump
+
 ```
 /script run entity_load_handler('zombified_piglin', _(e, new) -> if(new, modify(e, 'motion', 0, 1, 0)) )
 ```
+
 But the following handler, attempting to despawn pigmen that spawn in portals, will cause the game to freeze due to cascading access to blocks that would cause neighbouring chunks
 to force generate, causing also error messages for all pigmen caused by packets send after entity is removed by script.
+
 ```
 /script run entity_load_handler('zombified_piglin', _(e, new) -> if(new && block(pos(e))=='nether_portal', modify(e, 'remove') ) )
 ```
+
 Easiest method to circumvent these issues is delay the check, which may or may not cause cascade load to happen, but
 will definitely break the infinite chain.
+
 ```
 /script run entity_load_handler('zombified_piglin', _(e, new) -> if(new, schedule(0, _(outer(e)) -> if(block(pos(e))=='nether_portal', modify(e, 'remove') ) ) ) )
 ```
+
 But the best is to perform the check first time the entity will be ticked - giving the game all the time to ensure chunk
 is fully loaded and entity processing, removing the tick handler:
+
 ```
 /script run entity_load_handler('zombified_piglin', _(e, new) -> if(new, entity_event(e, 'on_tick', _(e) -> ( if(block(pos(e))=='nether_portal', modify(e, 'remove')); entity_event(e, 'on_tick', null) ) ) ) )
 ```
+
 Looks little convoluted, but that's the safest method to ensure your app won't crash.
