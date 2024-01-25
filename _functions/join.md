@@ -7,8 +7,8 @@ signatures:
       - name: values
 ---
 
-Returns a string that contains joined elements of the list, iterator, or all values,
-concatenated with `delim` delimiter
+Returns a string that contains joined elements of the list, iterator, or all
+values, concatenated with `delim` delimiter
 
 ```scarpet
 join('-',range(10))  => 0-1-2-3-4-5-6-7-8-9

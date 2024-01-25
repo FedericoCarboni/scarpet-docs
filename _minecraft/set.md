@@ -3,25 +3,28 @@ signatures:
   - params:
       - name: pos
       - name: block
-      - name: property
-      - name: value
-      - name: ''
+      - name: properties
+  - params:
+      - name: pos
+      - name: block
+      - name: properties
       - name: block_data
 ---
 
-, `set(pos, block, [property?, value?, ...], block_data?)`, `set(pos, block, {property? -> value?, ...}, block_data?)`
+First argument for the `set` function is either a coord triple, list of three
+numbers, or a world localized block value. Second argument, `block`, is either
+an existing block value, a result of `block()` function, or a string value
+indicating the block name with optional state and block data. It is then
+followed by an optional `property - value` pairs for extra block state (which
+can also be provided in a list or a map). Optional `block_data` include the
+block data to be set for the target block.
 
-First argument for the `set` function is either a coord triple, list of three numbers, or a world localized block value.
-Second argument, `block`, is either an existing block value, a result of `block()` function, or a string value indicating the block name
-with optional state and block data. It is then followed by an optional
-`property - value` pairs for extra block state (which can also be provided in a list or a map). Optional `block_data` include the block data to
-be set for the target block.
-
-If `block` is specified only by name, then if a
-destination block is the same the `set` operation is skipped, otherwise is executed, for other potential extra
+If `block` is specified only by name, then if a destination block is the same
+the `set` operation is skipped, otherwise is executed, for other potential extra
 properties that the original source block may have contained.
 
-The returned value is either the block state that has been set, or `false` if block setting was skipped, or failed
+The returned value is either the block state that has been set, or `false` if
+block setting was skipped, or failed
 
 Throws `unknown_block` if provided block to set is not valid
 

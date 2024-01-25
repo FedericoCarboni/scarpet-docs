@@ -11,10 +11,11 @@ signatures:
       - name: step
 ---
 
-Creates a range of numbers from `from`, no greater/larger than `to`. The `step` parameter dictates not only the
-increment size, but also direction (can be negative). The returned value is not a proper list, just the iterator
-but if for whatever reason you need a proper list with all items evaluated, use `[range(to)]`.
-Primarily to be used in higher order functions
+Creates a range of numbers from `from`, no greater/larger than `to`. The `step`
+parameter dictates not only the increment size, but also direction (can be
+negative). The returned value is not a proper list, just the iterator but if for
+whatever reason you need a proper list with all items evaluated, use
+`[range(to)]`. Primarily to be used in higher order functions
 
 ```scarpet
 range(10)  => [...]

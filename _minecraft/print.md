@@ -7,11 +7,13 @@ signatures:
       - name: expr
 ---
 
-prints the value of the expression to chat. Passes the result of the argument to the output unchanged,
-so `print`-statements can be weaved in code to debug programming issues. By default it uses the same communication
-channels that most vanilla commands are using.
+prints the value of the expression to chat. Passes the result of the argument to
+the output unchanged, so `print`-statements can be weaved in code to debug
+programming issues. By default it uses the same communication channels that most
+vanilla commands are using.
 
-In case player is directly specified, it only sends the message to that player, like `tell` command.
+In case player is directly specified, it only sends the message to that player,
+like `tell` command.
 
 ```scarpet
 print('foo') => results in foo, prints: foo

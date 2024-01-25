@@ -1,7 +1,7 @@
 ---
 signatures:
   - params:
-      - name: 'n'
+      - name: "n"
 ---
 
 Absolut value.

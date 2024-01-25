@@ -3,28 +3,33 @@ signatures:
   - params:
       - name: pos
       - name: destroypos
-      - name: '1'
+      - name: "1"
       - name: destroypos
-      - name: 'N'
+      - name: "N"
       - name: destroypos
       - name: tool
       - name: nbt
 ---
 
-Destroys the block like it was mined by a player. Add -1 for silk touch, and a positive number for fortune level.
-If tool is specified, and optionally its nbt, it will use that tool and will attempt to mine the block with this tool.
-If called without item context, this function, unlike harvest, will affect all kinds of blocks. If called with item
-in context, it will fail to break blocks that cannot be broken by a survival player.
+Destroys the block like it was mined by a player. Add -1 for silk touch, and a
+positive number for fortune level. If tool is specified, and optionally its nbt,
+it will use that tool and will attempt to mine the block with this tool. If
+called without item context, this function, unlike harvest, will affect all
+kinds of blocks. If called with item in context, it will fail to break blocks
+that cannot be broken by a survival player.
 
-Without item context it returns `false` if failed to destroy the block and `true` if block breaking was successful.
-In item context, `true` means that breaking item has no nbt to use, `null` indicating that the tool should be
-considered broken in process, and `nbt` type value, for a resulting NBT tag on a hypothetical tool. Its up to the
-programmer to use that nbt to apply it where it belong
+Without item context it returns `false` if failed to destroy the block and
+`true` if block breaking was successful. In item context, `true` means that
+breaking item has no nbt to use, `null` indicating that the tool should be
+considered broken in process, and `nbt` type value, for a resulting NBT tag on a
+hypothetical tool. Its up to the programmer to use that nbt to apply it where it
+belong
 
 Throws `unknown_item` if `tool` doesn't exist.
 
-Here is a sample code that can be used to mine blocks using items in player inventory, without using player context
-for mining. Obviously, in this case the use of `harvest` would be much more applicable:
+Here is a sample code that can be used to mine blocks using items in player
+inventory, without using player context for mining. Obviously, in this case the
+use of `harvest` would be much more applicable:
 
 ```scarpet
 mine(x,y,z) ->

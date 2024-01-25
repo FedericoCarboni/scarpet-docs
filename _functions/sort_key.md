@@ -5,7 +5,8 @@ signatures:
       - name: key_expr
 ---
 
-Sorts a copy of the list in the order or keys as defined by the `key_expr` for each element
+Sorts a copy of the list in the order or keys as defined by the `key_expr` for
+each element
 
 ```scarpet
 sort_key([1,3,2],_)  => [1, 2, 3]

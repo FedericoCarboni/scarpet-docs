@@ -3,6 +3,8 @@ params:
   - name: player
 ---
 
-Triggered when a player sends a command to swap their offhand item. Executed before the effect is applied on the server.
+Triggered when a player sends a command to swap their offhand item. Executed
+before the effect is applied on the server.
 
-This event can be cancelled by returning `'cancel'`, which prevents the hands from being swapped.
+This event can be cancelled by returning `'cancel'`, which prevents the hands
+from being swapped.

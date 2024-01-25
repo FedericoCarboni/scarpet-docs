@@ -6,7 +6,8 @@ signatures:
       - name: titleexpr
 ---
 
-Returns lowercase, uppercase or titlecase representation of a string representation of the passed expression
+Returns lowercase, uppercase or titlecase representation of a string
+representation of the passed expression
 
 ```scarpet
 lower('aBc') => 'abc'

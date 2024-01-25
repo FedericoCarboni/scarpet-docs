@@ -4,9 +4,9 @@ signatures:
       - name: prefix
 ---
 
-It returns all names of variables from local scope (if prefix does not start with 'global') or global variables
-(otherwise). Here is a larger example that uses combination of `vars` and `var` functions to be
-used for object counting
+It returns all names of variables from local scope (if prefix does not start
+with 'global') or global variables (otherwise). Here is a larger example that
+uses combination of `vars` and `var` functions to be used for object counting
 
 ```scarpet
 /script run

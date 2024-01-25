@@ -2,5 +2,3 @@
 params:
   - name: player
 ---
-
-

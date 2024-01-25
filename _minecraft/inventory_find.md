@@ -4,14 +4,15 @@ signatures:
       - name: inventory
       - name: item
       - name: start_slot
-      - name: ''
+      - name: ""
       - name: inventory_findinventory
-      - name: 'null'
+      - name: "null"
       - name: start_slot
 ---
 
-Finds the first slot with a corresponding item in the inventory, or if queried with null: the first empty slot.
-Returns slot number if found, or null otherwise. Optional start_slot argument allows to skip all preceeding slots
+Finds the first slot with a corresponding item in the inventory, or if queried
+with null: the first empty slot. Returns slot number if found, or null
+otherwise. Optional start_slot argument allows to skip all preceeding slots
 allowing for efficient (so not slot-by-slot) inventory search for items.
 
 ```scarpet

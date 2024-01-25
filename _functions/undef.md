@@ -4,8 +4,9 @@ signatures:
       - name: expr
 ---
 
-Removes all bindings of a variable with a name of `expr`. Removes also all function definitions with that name.
-It can affect global variable pool, and local variable set for a particular function.
+Removes all bindings of a variable with a name of `expr`. Removes also all
+function definitions with that name. It can affect global variable pool, and
+local variable set for a particular function.
 
 ```scarpet
 inc(i) -> i+1; foo = 5; inc(foo) => 6

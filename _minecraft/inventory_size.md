@@ -4,8 +4,8 @@ signatures:
       - name: inventory
 ---
 
-Returns the size of the inventory for the entity or block in question. Returns null if the block or entity don't
-have an inventory.
+Returns the size of the inventory for the entity or block in question. Returns
+null if the block or entity don't have an inventory.
 
 ```scarpet
 inventory_size(player()) => 41

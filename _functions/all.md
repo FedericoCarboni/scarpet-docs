@@ -6,9 +6,10 @@ signatures:
         binds: [_, _i]
 ---
 
-Returns `true` if all elements on the list satisfy the condition. Its roughly equivalent
-to `all(list,expr) <=> for(list,expr)==length(list)`. `expr` also receives bound `_` and `_i` variables. `break`
-and `continue` have no sense and cannot be used inside of `expr` body.
+Returns `true` if all elements on the list satisfy the condition. Its roughly
+equivalent to `all(list,expr) <=> for(list,expr)==length(list)`. `expr` also
+receives bound `_` and `_i` variables. `break` and `continue` have no sense and
+cannot be used inside of `expr` body.
 
 ```scarpet
 all([1,2,3], check_prime(_))  => true

@@ -6,8 +6,9 @@ signatures:
         binds: [_, _i]
 ---
 
-filters `list` elements returning only these that return positive result of the `expr`. With `break` and `continue`
-statements, the supplied value can be used as a boolean check instead.
+filters `list` elements returning only these that return positive result of the
+`expr`. With `break` and `continue` statements, the supplied value can be used
+as a boolean check instead.
 
 ```scarpet
 filter(range(100), !(_%5), _*_>1000)  => [0, 5, 10, 15, 20, 25, 30]

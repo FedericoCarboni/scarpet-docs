@@ -1,10 +1,11 @@
 ---
 title: outer
 signatures:
-    - params:
-        - name: variable
-          type: variable
+  - params:
+      - name: variable
+        type: variable
 ---
+
 Captures a variable from the outer scope.
 
 ```scarpet

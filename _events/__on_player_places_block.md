@@ -6,5 +6,5 @@ params:
   - name: block
 ---
 
-Triggered when player places a block, after block is placed in the world, but before scoreboard is triggered or player inventory
-adjusted.
+Triggered when player places a block, after block is placed in the world, but
+before scoreboard is triggered or player inventory adjusted.

@@ -17,4 +17,5 @@ not set).
 print(bar); // bar == null
 ```
 
-Similarly, trying to get a non-existent key from a collection will return `null`.
+Similarly, trying to get a non-existent key from a collection will return
+`null`.

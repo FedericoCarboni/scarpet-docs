@@ -3,5 +3,3 @@ signatures:
   - params:
       - name: deg
 ---
-
-

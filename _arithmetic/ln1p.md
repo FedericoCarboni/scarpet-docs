@@ -1,7 +1,7 @@
 ---
 signatures:
   - params:
-      - name: 'n'
+      - name: "n"
 ---
 
 Natural logarithm of `n+1`. Very optimistic.

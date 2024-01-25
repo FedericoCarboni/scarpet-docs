@@ -1,12 +1,13 @@
 ---
 title: c_for
 signatures:
-    - params:
-        - name: init
-        - name: condition
-        - name: increment
-        - name: body
+  - params:
+      - name: init
+      - name: condition
+      - name: increment
+      - name: body
 ---
+
 Mimics a C-Style `for` loop `for (init; condition; increment) { body }`
 
 ```java

@@ -4,8 +4,8 @@ signatures:
       - name: expr
 ---
 
-Returns length of the expression, the length of the string, the length of the integer part of the number,
-or length of the list
+Returns length of the expression, the length of the string, the length of the
+integer part of the number, or length of the list
 
 ```scarpet
 length(pi) => 1

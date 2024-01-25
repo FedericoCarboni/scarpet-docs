@@ -1,7 +1,8 @@
 ---
 signatures:
   - params:
-      - name: 'n'
+      - name: "n"
 ---
 
-Square root (not 'a squirt') of a number. For other fancy roots, use `^`, math and yo noggin. Imagine square roots on a tree...
+Square root (not 'a squirt') of a number. For other fancy roots, use `^`, math
+and yo noggin. Imagine square roots on a tree...

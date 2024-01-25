@@ -1,12 +1,13 @@
 ---
 title: for
 signatures:
-    - params:
-        - name: iterable
-        - name: body
-          binds: [_, _i]
-      returns: number
+  - params:
+      - name: iterable
+      - name: body
+        binds: [_, _i]
+    returns: number
 ---
+
 Iterate over each item in an iterable value.
 
 `for()` takes two arguments, an iterable value such as a `list` or a `map`

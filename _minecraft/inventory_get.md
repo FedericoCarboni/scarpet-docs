@@ -5,8 +5,9 @@ signatures:
       - name: slot
 ---
 
-Returns the item in the corresponding inventory slot, or null if slot empty or inventory is invalid. You can use
-negative numbers to indicate slots counted from 'the back'.
+Returns the item in the corresponding inventory slot, or null if slot empty or
+inventory is invalid. You can use negative numbers to indicate slots counted
+from 'the back'.
 
 ```scarpet
 inventory_get(player(), 0) => null // nothing in first hotbar slot

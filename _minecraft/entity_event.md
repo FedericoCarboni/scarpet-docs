@@ -8,8 +8,9 @@ signatures:
 
 , `entity_event(e, event, call_name, ... args?)`
 
-Attaches specific function from the current package to be called upon the `event`, with extra `args` carried to the
-original required arguments for the event handler.
+Attaches specific function from the current package to be called upon the
+`event`, with extra `args` carried to the original required arguments for the
+event handler.
 
 ```scarpet
 protect_villager(entity, amount, source, source_entity, healing_player) ->
@@ -28,5 +29,6 @@ __on_player_interacts_with_entity(player, entity, hand) ->
 )
 ```
 
-In this case this will protect a villager from entity damage (zombies, etc.) except from players by granting all the
-health back to the villager after being harmed.
+In this case this will protect a villager from entity damage (zombies, etc.)
+except from players by granting all the health back to the villager after being
+harmed.

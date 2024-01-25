@@ -4,7 +4,8 @@ signatures:
       - name: expr
 ---
 
-Returns a numeric context of the expression. Can be used to read numbers from strings, or other types
+Returns a numeric context of the expression. Can be used to read numbers from
+strings, or other types
 
 ```scarpet
 number(null) => 0

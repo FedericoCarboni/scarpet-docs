@@ -1,10 +1,11 @@
 ---
 title: return
 signatures:
-    - params: []
-    - params:
-        - name: value
+  - params: []
+  - params:
+      - name: value
 ---
+
 Return a value from a function.
 
 A `return()` marks the end of an execution path in a function:
@@ -25,4 +26,5 @@ foo() -> (
 );
 ```
 
-A `return()` with no arguments returns [`null`]({{ '/constants/null/' | relative_url }}).
+A `return()` with no arguments returns
+[`null`]({{ '/constants/null/' | relative_url }}).

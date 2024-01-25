@@ -4,4 +4,5 @@ signatures:
       - name: pos
 ---
 
-Sends full chunk data to clients. Useful when lots stuff happened and you want to refresh it on the clients.
+Sends full chunk data to clients. Useful when lots stuff happened and you want
+to refresh it on the clients.

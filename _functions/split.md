@@ -5,11 +5,12 @@ signatures:
       - name: expr
 ---
 
-Splits a string under `expr` by `delim` which can be a regular expression. If no delimiter is specified, it splits
-by characters.
+Splits a string under `expr` by `delim` which can be a regular expression. If no
+delimiter is specified, it splits by characters.
 
-If `expr` is a list, it will split the list into multiple sublists by the element (s) which equal `delim`, or which equal the empty string
-in case no delimiter is specified.
+If `expr` is a list, it will split the list into multiple sublists by the
+element (s) which equal `delim`, or which equal the empty string in case no
+delimiter is specified.
 
 Splitting a `null` value will return an empty list.
 

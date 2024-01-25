@@ -5,8 +5,10 @@ signatures:
       - name: posentity
 ---
 
-Returns a triple of coordinates of a specified block or entity. Technically entities are queried with `query` function
-and the same can be achieved with `query(entity,'pos')`, but for simplicity `pos` allows to pass all positional objects.
+Returns a triple of coordinates of a specified block or entity. Technically
+entities are queried with `query` function and the same can be achieved with
+`query(entity,'pos')`, but for simplicity `pos` allows to pass all positional
+objects.
 
 ```scarpet
 pos(block(0,5,0)) => [0,5,0]
