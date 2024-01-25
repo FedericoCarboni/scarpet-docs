@@ -1,2 +1,7 @@
 ---
+signatures:
+  - params:
+      - name: deg
 ---
+
+
