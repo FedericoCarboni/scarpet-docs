@@ -117,6 +117,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - pkg/
+  - README.md
 
 include:
   - "__*.md"
