@@ -6,7 +6,7 @@ signatures:
         binds: [_, _i]
 ---
 
-filters `list` elements returning only these that return positive result of the
+Filters `list` elements returning only these that return positive result of the
 `expr`. With `break` and `continue` statements, the supplied value can be used
 as a boolean check instead.
 

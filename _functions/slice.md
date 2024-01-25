@@ -6,7 +6,7 @@ signatures:
       - name: to
 ---
 
-extracts a substring, or sublist (based on the type of the result of the
+Extracts a substring, or sublist (based on the type of the result of the
 expression under expr with starting index of `from`, and ending at `to` if
 provided, or the end, if omitted. Can use negative indices to indicate counting
 form the back of the list, so `-1 <=> length(_)`.

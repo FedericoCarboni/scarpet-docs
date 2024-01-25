@@ -10,5 +10,7 @@ local variable set with a hash map type key-value access, can also be used with
 global variables
 
 ```scarpet
-a = 1; var('a') = 'foo'; a => a == 'foo'
+a = 1;
+var('a') = 'foo';
+a == 'foo'
 ```

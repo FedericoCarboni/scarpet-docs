@@ -1,10 +1,11 @@
 ---
 signatures:
   - params:
-      - name: ""
+      - name: timeout
+  - params:
+      - name: timeout
+      - name: on_close
 ---
-
-`sleep(timeout)`, `sleep(timeout, close_expr)`
 
 Halts the execution of the thread (or the game itself, if run not as a part of a
 task) for `expr` milliseconds. It checks for interrupted execution, in that case
@@ -22,6 +23,6 @@ the app engine will not forcefully remove your running tasks, so the tasks
 themselves need to properly react to the closing request.
 
 ```scarpet
-sleep(50)  # wait for 50 milliseconds
-sleep(1000, print('Interrupted')) # waits for 1 second, outputs a message when thread is shut down.
+sleep(50)  // wait for 50 milliseconds
+sleep(1000, print('Interrupted')) // waits for 1 second, outputs a message when thread is shut down.
 ```

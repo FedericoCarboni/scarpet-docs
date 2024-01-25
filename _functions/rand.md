@@ -21,9 +21,3 @@ map(range(10), floor(rand(10))) => [5, 8, 0, 6, 9, 3, 9, 9, 1, 8]
 map(range(10), bool(rand(2))) => [false, false, true, false, false, false, true, false, true, false]
 map(range(10), str('%.1f',rand(_))) => [0.0, 0.4, 0.6, 1.9, 2.8, 3.8, 5.3, 2.2, 1.6, 5.6]
 ```
-
-## `reset_seed(seed)`
-
-Resets the sequence of the randomizer used by `rand` for this seed to its
-initial state. Returns a boolean value indicating if the given seed has been
-used or not.
