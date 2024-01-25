@@ -6,7 +6,8 @@ const matter = require("gray-matter");
 const docs = {
   constants: {},
   functions: {},
-  events: {},
+  minecraftFunctions: {},
+  minecraftEvents: {},
 };
 
 function parseDocs(dir, docs) {
@@ -16,11 +17,8 @@ function parseDocs(dir, docs) {
     if (!entryName.endsWith(".md")) continue;
     const entry = entryName.slice(0, -3);
     const obj = matter(fs.readFileSync(entryPath, "utf-8"));
-    docs[entry] = { docs: ("" + obj.content).trim() || undefined };
     delete obj.data.title;
-    if (Object.keys(obj.data).length) {
-      docs[entry].data = obj.data;
-    }
+    docs[entry] = { ...obj.data, docs: ("" + obj.content).trim() || undefined };
   }
 }
 
@@ -28,6 +26,8 @@ parseDocs(path.join(__dirname, "../../_constants"), docs.constants);
 parseDocs(path.join(__dirname, "../../_control-flow"), docs.functions);
 parseDocs(path.join(__dirname, "../../_functions"), docs.functions);
 parseDocs(path.join(__dirname, "../../_arithmetic"), docs.functions);
+parseDocs(path.join(__dirname, "../../_minecraft"), docs.minecraftFunctions);
+// parseDocs(path.join(__dirname, "../../_minecraft"), docs.minecraftEvents);
 
 fs.writeFileSync(
   path.join(__dirname, "../constants.json"),
@@ -36,4 +36,8 @@ fs.writeFileSync(
 fs.writeFileSync(
   path.join(__dirname, "../functions.json"),
   JSON.stringify(docs.functions, void 0, void 0)
+);
+fs.writeFileSync(
+  path.join(__dirname, "../minecraft.json"),
+  JSON.stringify(docs.minecraftFunctions, void 0, void 0)
 );

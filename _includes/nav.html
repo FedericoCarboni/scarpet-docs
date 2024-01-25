@@ -119,4 +119,64 @@
       </nav>
     </div>
   </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="minecraft-header">
+      <button
+        class="accordion-button collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#minecraft-collapse"
+        aria-expanded="true"
+        aria-controls="minecraft-collapse"
+      >
+        Minecraft
+      </button>
+    </h2>
+    <div
+      class="accordion-collapse collapse"
+      id="minecraft-collapse"
+      aria-labelledby="minecraft-header"
+      data-bs-parent="#content-nav-accordion"
+    >
+      <nav class="nav flex-column">
+        {% for el in site.minecraft %}
+        <a
+          class="nav-link{% if el.title == page.title %} active{% endif %}"
+          href="{{ el.url | relative_url }}"
+        >
+          <code>{{ el.title | downcase }}</code>
+        </a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="events-header">
+      <button
+        class="accordion-button collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#events-collapse"
+        aria-expanded="true"
+        aria-controls="events-collapse"
+      >
+        Events
+      </button>
+    </h2>
+    <div
+      class="accordion-collapse collapse"
+      id="events-collapse"
+      aria-labelledby="events-header"
+      data-bs-parent="#content-nav-accordion"
+    >
+      <nav class="nav flex-column">
+        {% for el in site.events %}
+        <a
+          class="nav-link{% if el.title == page.title %} active{% endif %}"
+          href="{{ el.url | relative_url }}"
+        >
+          <code>{{ el.title | downcase }}</code>
+        </a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
 </div>

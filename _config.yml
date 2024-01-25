@@ -64,6 +64,18 @@ defaults:
     values:
       layout: language
       sectionid: arithmetic
+  - scope:
+      path: _minecraft
+      type: minecraft
+    values:
+      layout: language
+      sectionid: minecraft
+  - scope:
+      path: _events
+      type: events
+    values:
+      layout: language
+      sectionid: events
 
 collections:
   control-flow:
@@ -76,6 +88,12 @@ collections:
     permalink: /:collection/:path/
     output: true
   arithmetic:
+    permalink: /:collection/:path/
+    output: true
+  minecraft:
+    permalink: /:collection/:path/
+    output: true
+  events:
     permalink: /:collection/:path/
     output: true
 
@@ -99,3 +117,6 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - pkg/
+
+include:
+  - "__*.md"
