@@ -1,0 +1,44 @@
+{{ define "page" }}
+<main>
+  <!-- <aside class="toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+    <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
+    {{ .TableOfContents }}
+  </aside> -->
+  <article class="container px-4">
+    <header>
+      <h1 class="pb-4">
+        {{ if or (eq .Params.kind "function") (eq .CurrentSection.Params.kind "function") -}}
+        {{   .Params.name }}()
+        {{ else if or (eq .Params.kind "const") (eq .CurrentSection.Params.kind "const") -}}
+        {{   .Params.name }}
+        {{ else -}}
+        {{   or .Title .RelPermalink }}
+        {{ end -}}
+      </h1>
+    </header>
+    {{ if or (eq .Params.kind "function") (eq .CurrentSection.Params.kind "function") -}}
+    {{ "## Syntax" | markdownify -}}
+    <pre class="language-scarpet"><code class="language-scarpet">{{ $name := .Params.name -}}
+{{ range $sign := .Params.signatures -}}
+{{ $name }}({{ range $index, $param := $sign.params -}}
+{{ if ne $index 0 -}}, {{ end -}}
+{{ if $param.rest -}}...{{ end -}}
+{{ $param.name -}}
+{{ end -}})
+{{ end -}}</code></pre>
+    {{ else if or (eq .Params.kind "const") (eq .CurrentSection.Params.kind "const") -}}
+    {{ "## Syntax" | markdownify -}}
+    <pre class="language-scarpet"><code class="language-scarpet">{{ .Title }}</code></pre>
+    {{ end -}}
+    {{ .Content }}
+  </article>
+  <div class="container pt-4">
+    <div class="alert alert-dark">
+      <h4>Found a problem with this page?</h4>
+      <ul>
+        <li><a href="{{ .Site.Params.repository }}/tree/main/content/{{ .File.Path }}">View the source on GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+</main>
+{{ end }}

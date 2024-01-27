@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ if .Title }}{{ printf "%s - %s" .Title .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ .Summary }}" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    {{ $opts := dict "transpiler" "dartsass" -}} {{ $style := resources.Get
+    "css/style.scss" | toCSS $opts | minify | fingerprint -}}
+    <link
+      rel="stylesheet"
+      href="{{ $style.RelPermalink }}"
+      integrity="{{ $style.Data.Integrity }}"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"
+      integrity="sha256-42IbU8t3tOwwbexB7ZVRHm3YDRf65aBPPjRtIUufj5I="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"
+      integrity="sha256-4mJNT2bMXxcc1GCJaxBmMPdmah5ji0Ldnd79DKd1hoM="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Include highlighting for Java -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-clike.min.js"
+      integrity="sha256-x2uk4kCTK9x1VGvjDlUPW6XhOBX/cVEcduniesMHJEQ="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-java.min.js"
+      integrity="sha256-TC3IHfye+lHjinVzk4BlKIxjxkhQ8Boy+KeyCj4kxac="
+      crossorigin="anonymous"
+    ></script>
+    {{ $scarpet := resources.Get "js/scarpet.js" -}} {{ $theme := resources.Get
+    "js/theme.js" -}} {{ $bundle := slice $scarpet $theme | resources.Concat
+    "js/bundle.js" | minify | fingerprint -}}
+    <script src="{{ $bundle.RelPermalink }}"></script>
+  </head>
+  <body>
+    <nav aria-label="breadcrumb" class="breadcrumb">
+      <ol>
+        {{ range .Ancestors.Reverse }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </li>
+        {{ end }}
+        <li class="active">
+          <a aria-current="page" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </li>
+      </ol>
+    </nav>
+
+    <div class="d-flex container-xxl">
+      <div class="sidebar flex-shrink-0 p-3">
+        <!-- <a
+          href="/"
+          class="d-flex align-items-center pb-3 mb-3 text-decoration-none border-bottom"
+        >
+          <span class="fs-5 fw-semibold">Collapsible</span>
+        </a> -->
+        <ul class="list-unstyled ps-0">
+          {{ range .Site.Sections -}}
+          {{ $id := .Title | strings.TrimSuffix "/_index.md" | lower | printf "sidebar-%s" -}}
+          <li class="mb-1">
+            <button
+              class="btn btn-toggle align-items-center rounded collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#{{ $id }}"
+              aria-expanded="false"
+            >
+              {{ or .Title .RelPermalink }}
+            </button>
+            <div class="collapse" id="{{ $id }}">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                {{ range .Pages -}}
+                <li>
+                  <a href="{{ .RelPermalink }}" class="link-light text-decoration-none rounded">{{ or .Title .RelPermalink }}</a>
+                </li>
+                {{ end -}}
+              </ul>
+            </div>
+          </li>
+          {{ end -}}
+        </ul>
+      </div>
+      {{ block "page" . }}{{ end }}
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

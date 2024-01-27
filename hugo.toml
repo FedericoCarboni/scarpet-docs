@@ -1,0 +1,12 @@
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "Scarpet"
+
+[params]
+repository = "https://github.com/FedericoCarboni/scarpet-docs"
+
+[markup]
+[markup.highlight]
+# Chroma does not support Scarpet and Hugo does not allow custom lexers so
+# highlighting is handled by JavaScript using PrismJS (see assets/js/scarpet.js)
+codeFences = false

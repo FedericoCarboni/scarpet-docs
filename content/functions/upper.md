@@ -1,0 +1,4 @@
+---
+title: upper()
+name: upper
+---

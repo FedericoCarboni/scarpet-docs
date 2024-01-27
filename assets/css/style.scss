@@ -1,0 +1,247 @@
+/**
+ * Custom PrismJS theme based on GitHub Dark colors.
+ * The GitHub Color scheme is owned by GitHub Inc. and licensed under the MIT
+ * license.
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #e1e4e8;
+  background: #24292e;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em 1.5em;
+  /* margin: 0.5em 0; */
+  overflow: auto;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #89939d;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.symbol,
+.token.deleted,
+.token.constant {
+  color: #79b8ff;
+}
+
+.token.number {
+  color: #79b8ff;
+}
+
+.token.class-name,
+.token.variable {
+  color: #ffab70;
+}
+
+.token.char,
+.token.string {
+  color: #9ecbff;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #e1e4e8;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.builtin,
+.token.keyword {
+  color: #f97583;
+}
+
+.token.function {
+  color: #b392f0;
+}
+
+.token.regex,
+.token.important {
+  color: #41a0ff;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.deprecated {
+  text-decoration-line: line-through;
+  color: #f97583;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.main {
+  grid-area: main;
+
+  @media (max-width: 992px) {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-areas: "toc" "content";
+    grid-template-rows: auto auto 1fr;
+    gap: inherit;
+  }
+
+  @media (min-width: 992px) {
+    grid-template-areas: "content toc";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 4fr 1fr;
+  }
+}
+
+.toc {
+  grid-area: toc;
+}
+
+.toc nav {
+  ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    ul {
+      padding-left: 1rem;
+    }
+  }
+  a {
+    display: block;
+    // padding: .125rem 0 .125rem .75rem;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &.active {
+      text-decoration: underline;
+    }
+
+    &.active {
+      font-weight: 500;
+    }
+  }
+}
+
+.anchor {
+  text-decoration: none;
+  visibility: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  a {
+    color: var(--bs-heading-color);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      &::before {
+        visibility: visible;
+      }
+    }
+    &::before {
+      content: "#";
+      margin-left: -0.8em;
+      width: 0.8em;
+      height: inherit;
+      font-size: 0.7em;
+      text-decoration: none;
+      display: inline-block;
+      line-height: 1;
+      visibility: hidden;
+      color: var(--bs-secondary-color);
+    }
+  }
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+main {
+  height: 100vh;
+  height: -webkit-fill-available;
+  max-height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}
+
+.btn-toggle {
+  padding: 0.25rem 0.5rem;
+  font-weight: 600;
+  color: var(--bs-emphasis-color);
+  background-color: transparent;
+}
+.btn-toggle:hover,
+.btn-toggle:focus {
+  color: rgba(var(--bs-emphasis-color-rgb), 0.85);
+  background-color: var(--bs-tertiary-bg);
+}
+
+.btn-toggle::before {
+  width: 1.25em;
+  line-height: 0;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform 0.35s ease;
+  transform-origin: 0.5em 50%;
+}
+
+[data-bs-theme="dark"] .btn-toggle::before {
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28255,255,255,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+}
+
+.btn-toggle[aria-expanded="true"] {
+  color: rgba(var(--bs-emphasis-color-rgb), 0.85);
+}
+.btn-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+  padding: 0.1875rem 0.5rem;
+  margin-top: 0.125rem;
+  margin-left: 1.25rem;
+}
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+  background-color: var(--bs-tertiary-bg);
+}
+
+.scrollarea {
+  overflow-y: auto;
+}
+
+.sidebar {
+  width: 240px;
+}

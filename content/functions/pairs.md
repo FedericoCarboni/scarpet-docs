@@ -1,0 +1,4 @@
+---
+title: pairs()
+name: pairs
+---
