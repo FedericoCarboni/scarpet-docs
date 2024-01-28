@@ -11,6 +11,9 @@ devDependencies:
   prettier:
     specifier: ^3.2.4
     version: 3.2.4
+  prettier-plugin-go-template:
+    specifier: ^0.0.15
+    version: 0.0.15(prettier@3.2.4)
 
 packages:
 
@@ -204,6 +207,16 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
+  /prettier-plugin-go-template@0.0.15(prettier@3.2.4):
+    resolution: {integrity: sha512-WqU92E1NokWYNZ9mLE6ijoRg6LtIGdLMePt2C7UBDjXeDH9okcRI3zRqtnWR4s5AloiqyvZ66jNBAa9tmRY5EQ==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      prettier: ^3.0.0
+    dependencies:
+      prettier: 3.2.4
+      ulid: 2.3.0
+    dev: true
+
   /prettier@3.2.4:
     resolution: {integrity: sha512-FWu1oLHKCrtpO1ypU6J0SbK2d9Ckwysq6bHj/uaCP26DxrPpppCLQRGVuqAxSTvhF00AcvDRyYrLNW7ocBhFFQ==}
     engines: {node: '>=14'}
@@ -244,6 +257,11 @@ packages:
 
   /uc.micro@2.0.0:
     resolution: {integrity: sha512-DffL94LsNOccVn4hyfRe5rdKa273swqeA5DJpMOeFmEn1wCDc7nAbbB0gXlgBCL7TNzeTv6G7XVWzan7iJtfig==}
+    dev: true
+
+  /ulid@2.3.0:
+    resolution: {integrity: sha512-keqHubrlpvT6G2wH0OEfSW4mquYRcbe/J8NMmveoQOjUqmo+hXtO+ORCpWhdbZ7k72UtY61BL7haGxW6enBnjw==}
+    hasBin: true
     dev: true
 
   /unicorn-magic@0.1.0:
