@@ -1,44 +1,65 @@
 {{ define "page" }}
-<main>
-  <!-- <aside class="toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
-    <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
-    {{ .TableOfContents }}
-  </aside> -->
-  <article class="container px-4">
-    <header>
-      <h1 class="pb-4">
-        {{ if or (eq .Params.kind "function") (eq .CurrentSection.Params.kind "function") -}}
-        {{   .Params.name }}()
-        {{ else if or (eq .Params.kind "const") (eq .CurrentSection.Params.kind "const") -}}
-        {{   .Params.name }}
-        {{ else -}}
-        {{   or .Title .RelPermalink }}
-        {{ end -}}
-      </h1>
-    </header>
+  <article class="container-fluid">
+    <div
+      class="d-md-flex mb-4 flex-md-row align-items-center justify-content-between"
+    >
+      <header>
+        <h1 id="content-title">
+          {{ if or (eq .Params.kind "function") (eq .CurrentSection.Params.kind "function") -}}
+            {{ .Params.name }}()
+          {{ else if or (eq .Params.kind "const") (eq .CurrentSection.Params.kind "const") -}}
+            {{ .Params.name }}
+          {{ else -}}
+            {{ or .Title .RelPermalink }}
+          {{ end }}
+        </h1>
+      </header>
+      <a
+        class="btn btn-outline-secondary btn-sm"
+        href="{{ .Site.Params.repository }}/blob/main/content/{{ .File.Path }}?plain=1"
+        title="File: {{ .File.Path }} (Opens in a new tab)"
+        target="_blank"
+        >View on GitHub</a
+      >
+    </div>
     {{ if or (eq .Params.kind "function") (eq .CurrentSection.Params.kind "function") -}}
-    {{ "## Syntax" | markdownify -}}
-    <pre class="language-scarpet"><code class="language-scarpet">{{ $name := .Params.name -}}
-{{ range $sign := .Params.signatures -}}
-{{ $name }}({{ range $index, $param := $sign.params -}}
-{{ if ne $index 0 -}}, {{ end -}}
-{{ if $param.rest -}}...{{ end -}}
-{{ $param.name -}}
-{{ end -}})
-{{ end -}}</code></pre>
-    {{ else if or (eq .Params.kind "const") (eq .CurrentSection.Params.kind "const") -}}
-    {{ "## Syntax" | markdownify -}}
-    <pre class="language-scarpet"><code class="language-scarpet">{{ .Title }}</code></pre>
+      {{ "### Syntax" | markdownify -}}
+      {{ partial "syntax/function.html" . }}
+    {{ else if or (eq .Params.kind "const") (eq .CurrentSection.Params.kind
+      "const")
+    -}}
+      {{ "## Syntax" | markdownify -}}
+      <pre
+        class="language-scarpet"
+      ><code class="language-scarpet">{{ .Title }}</code></pre>
     {{ end -}}
     {{ .Content }}
-  </article>
-  <div class="container pt-4">
-    <div class="alert alert-dark">
-      <h4>Found a problem with this page?</h4>
-      <ul>
-        <li><a href="{{ .Site.Params.repository }}/tree/main/content/{{ .File.Path }}">View the source on GitHub</a></li>
-      </ul>
+    <div class="container pt-4">
+      <div class="alert alert-dark">
+        <h4>Found a problem with this page?</h4>
+        <ul>
+          <li>
+            <a
+              href="{{ .Site.Params.repository }}/blob/main/content/{{ .File.Path }}?plain=1"
+              title="File: {{ .File.Path }} (Opens in a new tab)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View the source on GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="{{ .Site.Params.repository }}/edit/main/content/{{ .File.Path }}"
+              title="Edit file: {{ .File.Path }} (Opens in a new tab)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Edit this page on GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</main>
+  </article>
 {{ end }}

@@ -1,0 +1,11 @@
+<!-- Whitespace inside pre tags is significant -->
+<pre
+  class="language-scarpet"
+><code class="language-scarpet">{{ $name := .Params.name -}}
+{{ range $sign := .Params.signatures -}}
+  {{ $name -}}({{ range $index, $param := $sign.params -}}
+    {{ if ne $index 0 -}}, {{ end -}}
+    {{ if $param.rest -}}...{{ end -}}
+    {{ $param.name -}}
+  {{ end -}})
+{{ end -}}</code></pre>
