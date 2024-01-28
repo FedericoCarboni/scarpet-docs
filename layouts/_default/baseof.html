@@ -59,60 +59,20 @@
   </head>
   <body>
     <div class="d-md-flex container-xxl">
-      <div class="sidebar flex-shrink-0 px-3">
-        <!-- <a
-          href="/"
-          class="d-flex align-items-center pb-3 mb-3 text-decoration-none border-bottom"
-        >
-          <span class="fs-5 fw-semibold">Collapsible</span>
-        </a> -->
-        <ul class="list-unstyled ps-0 overflow-y-auto position-fixed h-100" style="width: 220px">
-          {{ $currentSection := .CurrentSection -}}
-          {{ range .Site.Sections -}}
-            {{ $id := .Title | strings.TrimSuffix "/_index.md" | lower | printf "sidebar-%s" -}}
-            <li class="mb-1">
-              <button
-                class="btn btn-toggle align-items-center rounded{{ if ne $currentSection . }} collapsed{{ end }}"
-                data-bs-toggle="collapse"
-                data-bs-target="#{{ $id }}"
-                aria-expanded="{{ eq $currentSection . }}"
-              >
-                {{ or .Title .RelPermalink }}
-              </button>
-              <div
-                class="collapse{{ if eq $currentSection . }} show{{ end }}"
-                id="{{ $id }}"
-              >
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  {{ range .Pages -}}
-                    <li>
-                      <a
-                        href="{{ .RelPermalink }}"
-                        class="link-light text-decoration-none rounded"
-                      >
-                        {{ or .Title .RelPermalink }}
-                      </a>
-                    </li>
-                  {{ end -}}
-                </ul>
-              </div>
-            </li>
-          {{ end -}}
-        </ul>
-      </div>
+      {{ partial "sidebar/sidebar.html" . }}
       <div class="w-100">
         <nav aria-label="breadcrumb" class="container my-4 w-100 border-bottom">
           <ol style="--bs-breadcrumb-divider: '»';" class="breadcrumb">
             {{ range .Ancestors.Reverse }}
               <li class="breadcrumb-item">
-                <a class="link-light" href="{{ .RelPermalink }}">
+                <a class="link-body-emphasis" href="{{ .RelPermalink }}">
                   {{ .LinkTitle }}
                 </a>
               </li>
             {{ end }}
             <li class="breadcrumb-item active">
               <a
-                class="link-light"
+                class="link-body-emphasis"
                 href="{{ .RelPermalink }}"
                 aria-current="page"
               >
