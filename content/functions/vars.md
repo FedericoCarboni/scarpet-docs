@@ -20,8 +20,3 @@ count_blocks(ent) -> (
 );
 count_blocks(player());
 ```
-```java
-for (int i = 0; i < 5; i += 1) {
-    System.out.println(i.toString());
-}
-```

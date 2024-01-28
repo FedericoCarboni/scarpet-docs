@@ -1,4 +1,4 @@
 ---
-title: Control Flow
+title: String
 kind: function
 ---

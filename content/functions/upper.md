@@ -1,4 +1,0 @@
----
-title: upper()
-name: upper
----

@@ -1,5 +1,0 @@
----
-signatures:
-  - params:
-      - name: rad
----
