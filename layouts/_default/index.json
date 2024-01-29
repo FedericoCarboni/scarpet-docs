@@ -1,0 +1,6 @@
+{{ $.Scratch.Add "index" slice -}}
+{{ range .Site.RegularPages -}}
+  {{ $syntax := partial "syntax/syntax.html" . | plainify | strings.TrimLeft " " | strings.TrimRight " " }}
+  {{ $.Scratch.Add "index" (dict "title" .Title "contents" .Plain "syntax" $syntax  "permalink" .Permalink) -}}
+{{ end -}}
+{{ $.Scratch.Get "index" | jsonify }}

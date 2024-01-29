@@ -1,0 +1,13 @@
+{{ if or (eq .Params.kind "function") (eq .CurrentSection.Params.kind "function") -}}
+  {{ partial "syntax/function.html" . }}
+{{ else if or (eq .Params.kind "callback") (eq .CurrentSection.Params.kind
+  "callback")
+-}}
+  {{ partial "syntax/callback.html" . }}
+{{ else if or (eq .Params.kind "const") (eq .CurrentSection.Params.kind
+  "const")
+-}}
+  <pre
+    class="language-scarpet"
+  ><code class="language-scarpet">{{ .Params.name }}</code></pre>
+{{ end -}}
