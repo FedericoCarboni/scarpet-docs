@@ -1,13 +1,12 @@
 ---
+title: set_poi()
+name: set_poi
 signatures:
   - params:
       - name: pos
       - name: type
       - name: occupancy
-name: set_poi
-title: set_poi()
 ---
-
 
 Sets a Point of Interest (POI) of a specified type with optional custom
 occupancy. By default new POIs are not occupied. If type is `null`, POI at

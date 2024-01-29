@@ -1,12 +1,11 @@
 ---
+title: pos()
+name: pos
 signatures:
   - params:
       - name: block
       - name: posentity
-name: pos
-title: pos()
 ---
-
 
 Returns a triple of coordinates of a specified block or entity. Technically
 entities are queried with `query` function and the same can be achieved with

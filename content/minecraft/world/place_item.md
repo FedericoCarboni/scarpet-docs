@@ -1,14 +1,13 @@
 ---
+title: place_item()
+name: place_item
 signatures:
   - params:
       - name: item
       - name: pos
       - name: facing
       - name: sneak
-name: place_item
-title: place_item()
 ---
-
 
 Uses a given item in the world like it was used by a player. Item names are
 default minecraft item name, less the minecraft prefix. Default facing is 'up',

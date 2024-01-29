@@ -1,10 +1,10 @@
 ---
+title: block_properties()
+name: block_properties
 signatures:
   - params:
       - name: pos
-name: block_properties
-title: block_properties()
+deprecated: Deprecated — use [`block_state()`](/minecraft/world/block_state/)
 ---
-
 
 Deprecated by `keys(block_state(pos))`.

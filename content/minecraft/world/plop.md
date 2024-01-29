@@ -1,12 +1,11 @@
 ---
+title: plop()
+name: plop
 signatures:
   - params:
       - name: pos
       - name: what
-name: plop
-title: plop()
 ---
-
 
 Plops a structure or a feature at a given `pos`, so block, triple position
 coordinates or a list of coordinates. To `what` gets plopped and exactly where
@@ -35,8 +34,3 @@ however in many cases the world / dimension itself has certain rules to spawn
 mobs, like plopping a nether fortress in the overworld will not spawn nether
 mobs, because nether mobs can spawn only in the nether, but plopped in the
 nether - will behave like a valid nether fortress.
-
-# Iterating over larger areas of blocks
-
-These functions help scan larger areas of blocks without using generic loop
-functions, like nested `loop`.

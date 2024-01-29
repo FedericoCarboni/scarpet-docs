@@ -1,4 +1,6 @@
 ---
+title: poi()
+name: poi
 signatures:
   - params:
       - name: pos
@@ -7,10 +9,7 @@ signatures:
       - name: type
       - name: status
       - name: column_search
-name: poi
-title: poi()
 ---
-
 
 Queries a POI (Point of Interest) at a given position, returning `null` if none
 is found, or tuple of poi type and its occupancy load. With optional `type`,

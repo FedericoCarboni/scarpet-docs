@@ -1,11 +1,10 @@
 ---
+title: loaded()
+name: loaded
 signatures:
   - params:
       - name: pos
-name: loaded
-title: loaded()
 ---
-
 
 Boolean function, true if the block is accessible for the game mechanics.
 Normally `scarpet` doesn't check if operates on loaded area - the game will

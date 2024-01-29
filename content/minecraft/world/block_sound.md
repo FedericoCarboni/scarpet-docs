@@ -1,11 +1,10 @@
 ---
+title: block_sound()
+name: block_sound
 signatures:
   - params:
       - name: pos
-name: block_sound
-title: block_sound()
 ---
-
 
 Returns the name of sound type made by the block at position. One of:
 

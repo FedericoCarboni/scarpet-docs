@@ -1,18 +1,18 @@
 ---
+title: set()
+name: set
 signatures:
   - params:
       - name: pos
       - name: block
-      - name: properties
-  - params:
-      - name: pos
-      - name: block
-      - name: properties
+      - name: property
+      - name: value
+      - name: ""
       - name: block_data
-name: set
-title: set()
 ---
 
+, `set(pos, block, [property?, value?, ...], block_data?)`,
+`set(pos, block, {property? -> value?, ...}, block_data?)`
 
 First argument for the `set` function is either a coord triple, list of three
 numbers, or a world localized block value. Second argument, `block`, is either

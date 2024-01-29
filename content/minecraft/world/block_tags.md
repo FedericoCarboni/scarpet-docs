@@ -1,15 +1,10 @@
 ---
-signatures:
-  - params: []
-  - params:
-      - name: block
-  - params:
-      - name: block
-      - name: tag
-name: block_tags
 title: block_tags()
+name: block_tags
+signatures:
+  - params:
+      - name: ""
 ---
-
 
 , `block_tags(block)`, `block_tags(block, tag)`
 

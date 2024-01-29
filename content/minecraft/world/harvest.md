@@ -1,12 +1,11 @@
 ---
+title: harvest()
+name: harvest
 signatures:
   - params:
       - name: player
       - name: pos
-name: harvest
-title: harvest()
 ---
-
 
 Causes a block to be harvested by a specified player entity. Honors player item
 enchantments, as well as damages the tool if applicable. If the entity is not a

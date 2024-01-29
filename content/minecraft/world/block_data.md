@@ -1,11 +1,10 @@
 ---
+title: block_data()
+name: block_data
 signatures:
   - params:
       - name: pos
-name: block_data
-title: block_data()
 ---
-
 
 Return NBT string associated with specific location, or null if the block does
 not carry block data. Can be currently used to match specific information from

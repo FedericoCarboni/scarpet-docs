@@ -1,11 +1,10 @@
 ---
+title: map_colour()
+name: map_colour
 signatures:
   - params:
       - name: pos
-name: map_colour
-title: map_colour()
 ---
-
 
 Returns the map colour of a block at position. One of:
 

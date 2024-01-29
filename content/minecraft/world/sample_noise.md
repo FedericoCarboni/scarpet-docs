@@ -1,11 +1,10 @@
 ---
+title: sample_noise()
+name: sample_noise
 signatures:
   - params:
-      - name: ''
-name: sample_noise
-title: sample_noise()
+      - name: ""
 ---
-
 
 , `sample_noise(pos, ... types?)` 1.18+
 

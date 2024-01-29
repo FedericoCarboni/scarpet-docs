@@ -1,12 +1,12 @@
 ---
-signatures:
-  - params: []
-  - params:
-      - name: tag
-name: block_list
 title: block_list()
+name: block_list
+signatures:
+  - params:
+      - name: ""
 ---
 
+, `block_list(tag)`
 
 Returns list of all blocks in the game. If `tag` is provided, returns list of
 all blocks that belong to this block tag.

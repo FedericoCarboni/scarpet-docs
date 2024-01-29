@@ -43,4 +43,5 @@ str('pi: %.2f',pi) => 'pi: 3.14'
 str('player at: %d, %d, %d',pos(player())) => 'player at: 567, -2423, 124'
 ```
 
-[`String.format()`]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html#format(java.lang.String,java.lang.Object...)
+[`String.format()`]:
+  https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html#format(java.lang.String,java.lang.Object...)

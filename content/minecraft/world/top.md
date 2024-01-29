@@ -1,12 +1,11 @@
 ---
+title: top()
+name: top
 signatures:
   - params:
       - name: type
       - name: pos
-name: top
-title: top()
 ---
-
 
 Returns the Y value of the topmost block at given x, z coords (y value of a
 block is not important), according to the heightmap specified by `type`. Valid

@@ -1,18 +1,17 @@
 ---
+title: destroy()
+name: destroy
 signatures:
   - params:
       - name: pos
       - name: destroypos
-      - name: '1'
+      - name: "1"
       - name: destroypos
-      - name: 'N'
+      - name: "N"
       - name: destroypos
       - name: tool
       - name: nbt
-name: destroy
-title: destroy()
 ---
-
 
 Destroys the block like it was mined by a player. Add -1 for silk touch, and a
 positive number for fortune level. If tool is specified, and optionally its nbt,

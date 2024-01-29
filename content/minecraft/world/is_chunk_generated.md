@@ -1,11 +1,10 @@
 ---
+title: is_chunk_generated()
+name: is_chunk_generated
 signatures:
   - params:
       - name: pos
-name: is_chunk_generated
-title: is_chunk_generated()
 ---
-
 
 , `is_chunk_generated(pos, force)`
 

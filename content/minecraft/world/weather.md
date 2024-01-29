@@ -1,11 +1,10 @@
 ---
+title: weather()
+name: weather
 signatures:
   - params:
-      - name: ''
-name: weather
-title: weather()
+      - name: ""
 ---
-
 
 ,`weather(type)`,`weather(type, ticks)`
 

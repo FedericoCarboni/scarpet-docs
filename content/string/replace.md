@@ -32,4 +32,5 @@ string = 'John doe\'s dog is cuter than Jane\'s dog';
 print(replace(string, 'dog', 'cat')); // John doe's cat is cuter than Jane's cat
 ```
 
-[Java `Pattern`]: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html
+[Java `Pattern`]:
+  https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/regex/Pattern.html

@@ -1,13 +1,12 @@
 ---
+title: pos_offset()
+name: pos_offset
 signatures:
   - params:
       - name: pos
       - name: direction
       - name: amount
-name: pos_offset
-title: pos_offset()
 ---
-
 
 Returns a coords triple that is offset in a specified `direction` by `amount` of
 blocks. The default offset amount is 1 block. To offset into opposite facing,

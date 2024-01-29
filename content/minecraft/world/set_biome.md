@@ -1,13 +1,12 @@
 ---
+title: set_biome()
+name: set_biome
 signatures:
   - params:
       - name: pos
       - name: biome_name
       - name: updatetrue
-name: set_biome
-title: set_biome()
 ---
-
 
 Changes the biome at that block position. if update is specified and false, then
 chunk will not be refreshed on the clients. Biome changes can only be sent to

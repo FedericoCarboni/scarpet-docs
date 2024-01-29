@@ -1,14 +1,10 @@
 ---
+title: block_state()
+name: block_state
 signatures:
   - params:
       - name: block
-  - params:
-      - name: block
-      - name: property
-name: block_state
-title: block_state()
 ---
-
 
 , `block_state(block, property)`
 

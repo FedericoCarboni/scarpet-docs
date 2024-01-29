@@ -1,4 +1,6 @@
 ---
+title: create_explosion()
+name: create_explosion
 signatures:
   - params:
       - name: pos
@@ -7,10 +9,7 @@ signatures:
       - name: fire
       - name: source
       - name: attacker
-name: create_explosion
-title: create_explosion()
 ---
-
 
 Creates an explosion at a given position. Parameters work as follows:
 

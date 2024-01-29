@@ -1,11 +1,10 @@
 ---
+title: reset_chunk()
+name: reset_chunk
 signatures:
   - params:
       - name: pos
-name: reset_chunk
-title: reset_chunk()
 ---
-
 
 , `reset_chunk(from_pos, to_pos)`, `reset_chunk([pos, ...])` Removes and resets
 the chunk, all chunks in the specified area or all chunks in a list at once,

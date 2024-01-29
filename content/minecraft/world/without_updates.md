@@ -1,11 +1,10 @@
 ---
+title: without_updates()
+name: without_updates
 signatures:
   - params:
       - name: expr
-name: without_updates
-title: without_updates()
 ---
-
 
 Evaluates subexpression without causing updates when blocks change in the world.
 

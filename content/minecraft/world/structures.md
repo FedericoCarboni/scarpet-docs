@@ -1,13 +1,12 @@
 ---
+title: structures()
+name: structures
 signatures:
   - params:
       - name: pos
       - name: structurespos
       - name: structure_name
-name: structures
-title: structures()
 ---
-
 
 Returns structure information for a given block position. Note that structure
 information is the same for all the blocks from the same chunk. `structures`

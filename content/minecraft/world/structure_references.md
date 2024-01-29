@@ -1,13 +1,12 @@
 ---
+title: structure_references()
+name: structure_references
 signatures:
   - params:
       - name: pos
       - name: structure_referencespos
       - name: structure_name
-name: structure_references
-title: structure_references()
 ---
-
 
 Returns structure information that a chunk with a given block position is part
 of. `structure_references` function can be called with a block, or a block and a

@@ -1,17 +1,14 @@
 ---
+title: block()
+name: block
 signatures:
   - params:
       - name: x
-      - name: 'y'
+      - name: "y"
       - name: z
-  - params:
-      - name: pos
-  - params:
-      - name: state
-name: block
-title: block()
 ---
 
+, `block([x,y,z])`, `block(state)`
 
 Returns either a block from specified location, or block with a specific state
 (as used by `/setblock` command), so allowing for block properties, block entity

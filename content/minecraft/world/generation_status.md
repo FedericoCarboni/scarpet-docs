@@ -1,13 +1,12 @@
 ---
+title: generation_status()
+name: generation_status
 signatures:
   - params:
       - name: pos
       - name: generation_statuspos
-      - name: 'true'
-name: generation_status
-title: generation_status()
+      - name: "true"
 ---
-
 
 Returns generation status as per the ticket system. Can return any value from
 several available but chunks can only be stable in a few states: `full`,

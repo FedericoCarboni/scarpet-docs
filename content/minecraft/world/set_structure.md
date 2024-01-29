@@ -1,15 +1,14 @@
 ---
+title: set_structure()
+name: set_structure
 signatures:
   - params:
       - name: pos
       - name: structure_name
       - name: set_structurepos
       - name: structure_name
-      - name: 'null'
-name: set_structure
-title: set_structure()
+      - name: "null"
 ---
-
 
 Creates or removes structure information of a structure associated with a chunk
 of `pos`. Unlike `plop`, blocks are not placed in the world, only structure

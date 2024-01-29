@@ -1,10 +1,9 @@
 ---
+title: random_tick()
+name: random_tick
 signatures:
   - params:
       - name: pos
-name: random_tick
-title: random_tick()
 ---
-
 
 Causes a random tick at position.

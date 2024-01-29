@@ -1,13 +1,12 @@
 ---
+title: structure_eligibility()
+name: structure_eligibility
 signatures:
   - params:
       - name: pos
       - name: structure
       - name: size_needed
-name: structure_eligibility
-title: structure_eligibility()
 ---
-
 
 Checks worldgen eligibility for a structure in a given chunk. Requires a
 `Structure Variant` name (see above), or `Standard Structure` to check

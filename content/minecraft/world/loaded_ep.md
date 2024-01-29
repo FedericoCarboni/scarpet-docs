@@ -1,11 +1,12 @@
 ---
+title: loaded_ep()
+name: loaded_ep
 signatures:
   - params:
       - name: pos
-name: loaded_ep
-title: loaded_ep()
+deprecated:
+  Deprecated — use [`loaded_status()`](/minecraft/world/loaded_status/)
 ---
-
 
 Boolean function, true if the block is loaded and entity processing, as per
 1.13.2
