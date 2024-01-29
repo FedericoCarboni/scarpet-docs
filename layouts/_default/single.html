@@ -10,13 +10,7 @@
     >
       <header>
         <h1 id="content-title">
-          {{ if or (eq .Params.kind "function") (eq .CurrentSection.Params.kind "function") -}}
-            {{ .Params.name }}()
-          {{ else if or (eq .Params.kind "const") (eq .CurrentSection.Params.kind "const") -}}
-            {{ .Params.name }}
-          {{ else -}}
-            {{ or .Title .RelPermalink }}
-          {{ end }}
+          {{ or .Title .RelPermalink }}
         </h1>
       </header>
       <a
@@ -29,6 +23,11 @@
     </div>
     {{ "### Syntax" | markdownify -}}
     {{ partial "syntax/syntax.html" . }}
+    {{ if .Params.deprecated }}
+      <div class="alert alert-warning" role="alert">
+        {{ .Params.deprecated | markdownify }}
+      </div>
+    {{ end }}
     {{ .Content }}
     <div class="container pt-4">
       <div class="alert alert-dark">

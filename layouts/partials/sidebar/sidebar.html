@@ -4,6 +4,7 @@
       <form action=""></form>
     </div>
     <ul class="list-unstyled ps-0">
+      {{ $page := .Page }}
       {{ $currentSection := .CurrentSection }}
       {{ $sections := slice }}
       {{ range .Ancestors.Reverse }}
@@ -30,11 +31,18 @@
             id="{{ $id }}"
           >
             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <a
+                class="link-body-emphasis text-decoration-none rounded"
+                href="{{ $sect.RelPermalink }}"
+                title="{{ $sect.Title }}"
+              >
+                Overview
+              </a>
               {{ range $sect.Pages -}}
                 <li>
                   <a
                     href="{{ .RelPermalink }}"
-                    class="link-body-emphasis text-decoration-none rounded"
+                    class="link-body-emphasis text-decoration-none rounded{{ if .Params.deprecated }} text-decoration-line-through{{ end }}{{ if eq $page . }} active{{ end }}"
                   >
                     {{ or .Title .RelPermalink }}
                   </a>
