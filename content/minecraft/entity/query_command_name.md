@@ -10,6 +10,6 @@ signatures:
 Returns a valid string to be used in commands to address an entity. Its UUID for
 all entities except player, where its their name.
 
-<pre>
+```scarpet
 run('/kill ' + e~'command_name');
-</pre>
+```

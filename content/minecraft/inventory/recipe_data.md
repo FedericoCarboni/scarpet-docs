@@ -50,8 +50,8 @@ these can be determined using `crafting_remaining_item()` function
 
 Examples:
 
- <pre>
+ ```scarpet
  recipe_data('iron_ingot_from_nuggets')
  recipe_data('iron_ingot')
  recipe_data('glass', 'smelting')
- </pre>
+ ```

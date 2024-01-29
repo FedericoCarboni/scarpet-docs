@@ -31,7 +31,7 @@ to run and encounter that call again, causing stack to overflow. Thankfully it
 doesn't happen in vanilla running carpet, but may happen with other modified
 (modded) versions of the game.
 
-<pre>
+```scarpet
 loop(1000,game_tick())  // runs the game as fast as it can for 1000 ticks
 loop(1000,game_tick(100)) // runs the game twice as slow for 1000 ticks
-</pre>
+```

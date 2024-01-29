@@ -14,8 +14,8 @@ numbers and setting an item to negative is the same as empty.
 
 Throws `unknown_item` if item doesn't exist.
 
-<pre>
+```scarpet
 stack_limit('wooden_axe') => 1
 stack_limit('ender_pearl') => 16
 stack_limit('stone') => 64
-</pre>
+```

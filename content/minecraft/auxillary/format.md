@@ -68,9 +68,9 @@ on screen.
 
 Example usages:
 
-<pre>
+```scarpet
  print(format('rbu Error: ', 'r Stuff happened!'))
  print(format('w Click ','tb [HERE]', '^di Awesome!', '!/kill', 'w \ button to win $1000'))
   // the reason why I backslash the second space is that otherwise command parser may contract consecutive spaces
   // not a problem in apps
-</pre>
+```

@@ -15,7 +15,7 @@ default amount is 0 - which is all from the slot. NOTE: hoppers are quick enough
 to pick all the queued items from their inventory anyways. Returns size of the
 actual dropped items.
 
-<pre>
+```scarpet
 inventory_drop(player(), 0, 1) => 1 // Q's one item on the ground
 inventory_drop(x,y,z, 0) => 64 // removed and spawned in the world a full stack of items
-</pre>
+```

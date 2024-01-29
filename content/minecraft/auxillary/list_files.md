@@ -70,10 +70,10 @@ Throws:
 All other errors resulting of improper use of input arguments should result in
 `null` returned from the function, rather than exception thrown.
 
-<pre>
+```scarpet
 write_file('foo', 'shared_text, ['one', 'two']);
 write_file('foo', 'shared_text', 'three\n', 'four\n');
 write_file('foo', 'shared_raw', 'five\n', 'six\n');
 
 read_file('foo', 'shared_text')     => ['one', 'two', 'three', '', 'four', '', 'five', 'six']
-</pre>
+```

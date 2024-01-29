@@ -14,8 +14,8 @@ in ticks (-1 if it has infinity duration). With an argument, if the living
 entity has not that potion active, returns `null`, otherwise return a tuple of
 amplifier and remaining duration.
 
-<pre>
+```scarpet
 query(p,'effect')  => [[haste, 0, 177], [speed, 0, 177]]
 query(p,'effect','haste')  => [0, 177]
 query(p,'effect','resistance')  => null
-</pre>
+```

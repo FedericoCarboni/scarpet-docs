@@ -31,7 +31,7 @@ experimental `enable_hidden_dimensions()` after adding a datapack if needed.
 
 Synopsis:
 
-<pre>
+```scarpet
 script run create_datapack('foo',
 {
     'foo' -> { 'bar.json' -> {
@@ -42,11 +42,11 @@ script run create_datapack('foo',
         'b' -> 5
     } }
 })
-</pre>
+```
 
 Custom dimension example:
 
-<pre>
+```scarpet
 // 1.17
 script run create_datapack('funky_world',  {
     'data' -> { 'minecraft' -> { 'dimension' -> { 'custom_ow.json' -> {
@@ -92,11 +92,11 @@ script run a() -> create_datapack('funky_world',  {
      } } } }
 });
 enable_hidden_dimensions();  => ['funky_world']
-</pre>
+```
 
 Loot table example:
 
-<pre>
+```scarpet
 script run create_datapack('silverfishes_drop_gravel', {
     'data' -> { 'minecraft' -> { 'loot_tables' -> { 'entities' -> { 'silverfish.json' -> {
         'type' -> 'minecraft:entity',
@@ -116,11 +116,11 @@ script run create_datapack('silverfishes_drop_gravel', {
         ]
     } } } } }
 });
-</pre>
+```
 
 Recipe example:
 
-<pre>
+```scarpet
 script run create_datapack('craftable_cobwebs', {
     'data' -> { 'scarpet' -> { 'recipes' -> { 'cobweb.json' -> {
         'type' -> 'crafting_shaped',
@@ -140,10 +140,10 @@ script run create_datapack('craftable_cobwebs', {
         }
     } } } }
 });
-</pre>
+```
 
 Function example:
 
-<pre>
+```scarpet
  script run create_datapack('example',{'data/test/functions/talk.mcfunction'->'say 1\nsay 2'})
-</pre>
+```

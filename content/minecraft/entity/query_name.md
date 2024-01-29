@@ -15,8 +15,8 @@ signatures:
 
 String of entity name or formatted text in the case of `display_name`
 
-<pre>
+```scarpet
 query(e,'name')  => Leatherworker
 query(e,'custom_name')  => null
 query(e,'type')  => villager
-</pre>
+```
