@@ -2,6 +2,8 @@ baseURL = "https://example.org/"
 languageCode = "en-us"
 title = "Scarpet"
 
+pluralizeListTitles = false
+
 [params]
 repository = "https://github.com/FedericoCarboni/scarpet-docs"
 
@@ -10,3 +12,6 @@ repository = "https://github.com/FedericoCarboni/scarpet-docs"
 # Chroma does not support Scarpet and Hugo does not allow custom lexers so
 # highlighting is handled by JavaScript using PrismJS (see assets/js/scarpet.js)
 codeFences = false
+
+[outputs]
+home = ["HTML", "JSON"]
