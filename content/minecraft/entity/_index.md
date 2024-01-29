@@ -1,0 +1,4 @@
+---
+title: Entity
+kind: function
+---

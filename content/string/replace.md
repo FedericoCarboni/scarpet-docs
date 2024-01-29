@@ -5,10 +5,10 @@ signatures:
   - params:
       - name: string
       - name: regex
-      - name: replacement
   - params:
       - name: string
       - name: regex
+      - name: replacement
 ---
 
 Returns a new string with all matches of `regex` replaced by `replacement`, or

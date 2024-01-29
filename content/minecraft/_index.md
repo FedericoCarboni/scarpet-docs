@@ -1,4 +1,0 @@
----
-title: Minecraft
-kind: function
----

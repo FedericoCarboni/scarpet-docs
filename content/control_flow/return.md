@@ -27,5 +27,4 @@ foo() -> (
 );
 ```
 
-A `return()` with no arguments returns
-[`null`]({{ '/constants/null/' | relative_url }}).
+A `return()` with no arguments returns [`null`](/constants/null/).
