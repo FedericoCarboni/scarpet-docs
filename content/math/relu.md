@@ -6,5 +6,5 @@ signatures:
       - name: "n"
 ---
 
-Linear rectifier of `n`. 0 below 0, n above. Why not. `max(0,n)` with less moral
-repercussions.
+Returns the rectified linear unit of a number. Returns 0 if `n < 0` or `n`, same
+as `max(0, n)`.

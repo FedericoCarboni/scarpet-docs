@@ -7,8 +7,10 @@ signatures:
       - name: args
         rest: true
   - params:
-      - name: list
+      - name: args
 ---
+
+Returns the largest of the input arguments.
 
 Compute minimum or maximum of supplied arguments assuming default sorthoraphical
 order. In case you are missing `argmax`, just use `a ~ max(a)`, little less

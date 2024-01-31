@@ -6,4 +6,4 @@ signatures:
       - name: "n"
 ---
 
-Absolut value.
+Returns the absolute value of a number.

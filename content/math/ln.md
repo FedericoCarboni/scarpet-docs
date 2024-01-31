@@ -6,4 +6,4 @@ signatures:
       - name: "n"
 ---
 
-Natural logarithm of `n`. Naturally.
+Returns the natural logarithm of a number.

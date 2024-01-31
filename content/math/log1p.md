@@ -6,4 +6,5 @@ signatures:
       - name: "n"
 ---
 
-Binary logarithm of `n+1`. Also always positive.
+Returns an approximation of the binary logarithm of `1 + n`, so
+`log1p(n) ≈ log(1 + n)`.

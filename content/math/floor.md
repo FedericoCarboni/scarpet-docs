@@ -6,4 +6,4 @@ signatures:
       - name: "n"
 ---
 
-Returns the highest integer that is still no larger than `n`.
+Returns the largest integer less than or equal to the given number.

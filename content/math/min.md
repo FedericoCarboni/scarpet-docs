@@ -7,8 +7,11 @@ signatures:
       - name: args
         rest: true
   - params:
-      - name: list
+      - name: args
+        type: number[]
 ---
+
+Returns the smallest of the input arguments.
 
 Compute minimum or maximum of supplied arguments assuming default sorthoraphical
 order. In case you are missing `argmax`, just use `a ~ max(a)`, little less

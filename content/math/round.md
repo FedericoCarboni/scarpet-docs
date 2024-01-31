@@ -6,4 +6,4 @@ signatures:
       - name: "n"
 ---
 
-Closest integer value. Did you know the earth is also round?
+Returns the value of a number rounded to the nearest integer.

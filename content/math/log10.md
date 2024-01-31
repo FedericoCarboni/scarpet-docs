@@ -6,4 +6,4 @@ signatures:
       - name: "n"
 ---
 
-Decimal logarithm of `n`. Its ceiling is the length of its floor.
+Returns the decimal logarithm of a number.

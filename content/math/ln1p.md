@@ -6,4 +6,4 @@ signatures:
       - name: "n"
 ---
 
-Natural logarithm of `n+1`. Very optimistic.
+Returns an approximation of the natural logarithm of `1 + n`, so `ln1p(n) ≈ ln(1 + n)`.
