@@ -2,22 +2,41 @@
 title: weather()
 name: weather
 signatures:
+  - params: []
   - params:
-      - name: ""
+      - name: type
+        suggest: [clear, rain, thunder]
+  - params:
+      - name: type
+        suggest: [clear, rain, thunder]
+      - name: ticks
 ---
 
-,`weather(type)`,`weather(type, ticks)`
+### Querying
 
-If called with no args, returns `'clear'`, `'rain` or `'thunder'` based on the
-current weather. If thundering, will always return `'thunder'`, if not will
-return `'rain'` or `'clear'` based on the current weather.
+Called with no parameters, returns a string `clear`, `rain` or `thunder` based
+on the current weather.
 
-With one arg, (either `'clear'`, `'rain` or `'thunder'`), returns the number of
-remaining ticks for that weather type. NB: It can thunder without there being a
-thunderstorm; there has to be both rain and thunder to form a storm. So if
-running `weather()` returns `'thunder'`, you can use `weather('rain')>0` to see
-if there's a storm going on.
+Called with a single parameter, either `clear`, `rain` or `thunder`, returns the
+number of remaining ticks of that weather type.
 
-With two args, sets the weather to the given `type` for `ticks` ticks.
+**Note**: it can thunder without there being a thunderstorm; it has to _thunder_
+and _rain_ to have a thunderstorm.
 
-## Block and World querying
+#### Examples
+
+```scarpet
+if(weather() == 'thunder' && weather('rain') > 0,
+    print('There is a thunderstorm!'));
+```
+
+### Changing Weather
+
+Call with both `type` and `ticks` to set the weather to the given type for the
+specified amount of ticks.
+
+#### Examples
+
+```scarpet
+weather('rain', 200); // set to rain for 200 ticks
+```
