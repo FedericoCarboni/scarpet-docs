@@ -150,33 +150,29 @@ pre[class*="language-"] {
   visibility: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  a {
-    color: var(--bs-heading-color);
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-      &::before {
-        visibility: visible;
-      }
-    }
+.anchor-link {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
     &::before {
-      content: "#";
-      margin-left: -0.8em;
-      width: 0.8em;
-      height: inherit;
-      font-size: 0.7em;
-      text-decoration: none;
-      display: inline-block;
-      line-height: 1;
-      visibility: hidden;
-      color: var(--bs-secondary-color);
+      visibility: visible;
     }
+  }
+  &::before {
+    content: "#";
+    margin-left: -0.8em;
+    width: 0.8em;
+    height: inherit;
+    font-size: 0.7em;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+    visibility: hidden;
+    color: var(--bs-secondary-color);
+  }
+  code {
+    color: var(--bs-code-color);
   }
 }
 
@@ -241,6 +237,9 @@ main {
 .btn-toggle-nav a:hover,
 .btn-toggle-nav a:focus {
   background-color: var(--bs-tertiary-bg);
+}
+.btn-toggle-nav a.active {
+  text-decoration: underline !important;
 }
 
 .scrollarea {
