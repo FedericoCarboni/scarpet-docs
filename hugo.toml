@@ -13,5 +13,12 @@ repository = "https://github.com/FedericoCarboni/scarpet-docs"
 # highlighting is handled by JavaScript using PrismJS (see assets/js/scarpet.js)
 codeFences = false
 
+[outputFormats]
+[outputFormats.DocData]
+mediaType = "application/json"
+baseName = "docdata"
+isPlainText = true
+notAlternative = true
+
 [outputs]
-home = ["HTML", "JSON"]
+home = ["HTML", "JSON", "DocData"]
