@@ -3,9 +3,10 @@ title: last_tick_times()
 name: last_tick_times
 signatures:
   - params: []
+deprecated:
+  Deprecated — use
+  [`system_info('server_last_tick_times')`](/minecraft/auxillary/system_info/#server_last_tick_times)
 ---
-
-_**Deprecated**. Use `system_info('server_last_tick_times')` instead._
 
 Returns a 100-long array of recent tick times, in milliseconds. First item on
 the list is the most recent tick If called outside of the main tick (either

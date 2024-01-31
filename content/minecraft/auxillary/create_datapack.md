@@ -29,26 +29,29 @@ with all its quirks and sideeffects (like no worldgen changes, reloading all
 other datapacks, etc.). To enable newly added custom dimensions, call much more
 experimental `enable_hidden_dimensions()` after adding a datapack if needed.
 
-Synopsis:
+### Examples
 
 ```scarpet
-script run create_datapack('foo',
-{
-    'foo' -> { 'bar.json' -> {
-        'c' -> true,
-        'd' -> false,
-        'e' -> {'foo' -> [1,2,3]},
-        'a' -> 'foobar',
-        'b' -> 5
-    } }
-})
+create_datapack('foo', {
+    'foo' -> {
+        'bar.json' -> {
+            'c' -> true,
+            'd' -> false,
+            'e' -> {
+              'foo' -> [1, 2, 3],
+            },
+            'a' -> 'foobar',
+            'b' -> 5,
+        },
+    },
+});
 ```
 
 Custom dimension example:
 
 ```scarpet
 // 1.17
-script run create_datapack('funky_world',  {
+create_datapack('funky_world',  {
     'data' -> { 'minecraft' -> { 'dimension' -> { 'custom_ow.json' -> {
         'type' -> 'minecraft:the_end',
         'generator' -> {
@@ -64,7 +67,7 @@ script run create_datapack('funky_world',  {
 });
 
 // 1.18
-script run a() -> create_datapack('funky_world',  {
+a() -> create_datapack('funky_world',  {
    'data' -> { 'minecraft' -> { 'dimension' -> { 'custom_ow.json' -> {
       'type' -> 'minecraft:overworld',
          'generator' -> {
@@ -91,7 +94,7 @@ script run a() -> create_datapack('funky_world',  {
          }
      } } } }
 });
-enable_hidden_dimensions();  => ['funky_world']
+enable_hidden_dimensions();
 ```
 
 Loot table example:

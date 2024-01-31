@@ -3,9 +3,9 @@ title: seed()
 name: seed
 signatures:
   - params: []
+deprecated:
+  Deprecated — use
+  [`system_info('world_seed')`](/minecraft/auxillary/system_info/#world_seed)
 ---
 
-deprecated
-
-Returns current world seed. Function is deprecated, use
-`system_info('world_seed')` insteads.
+Returns current world seed.

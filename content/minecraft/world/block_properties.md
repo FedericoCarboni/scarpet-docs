@@ -6,5 +6,3 @@ signatures:
       - name: pos
 deprecated: Deprecated — use [`block_state()`](/minecraft/world/block_state/)
 ---
-
-Deprecated by `keys(block_state(pos))`.

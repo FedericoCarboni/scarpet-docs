@@ -3,9 +3,32 @@ title: particle()
 name: particle
 signatures:
   - params: []
+  - params:
+      - name: name
+      - name: pos
+  - params:
+      - name: name
+      - name: pos
+      - name: count
+  - params:
+      - name: name
+      - name: pos
+      - name: count
+      - name: spread
+  - params:
+      - name: name
+      - name: pos
+      - name: count
+      - name: spread
+      - name: speed
+  - params:
+      - name: name
+      - name: pos
+      - name: count
+      - name: spread
+      - name: speed
+      - name: player
 ---
-
-, `particle(name, pos, count?. spread?, speed?, player?)`
 
 Renders a cloud of particles `name` centered around `pos` position, by default
 `count` 10 of them, default `speed` of 0, and to all players nearby, but these
