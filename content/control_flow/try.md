@@ -40,26 +40,42 @@ that may have been modified by datapacks, resourcepacks or other mods, or when
 an error is outside of the programmers scope, such as problems when reading or
 decoding files.
 
-This is the hierarchy of the exceptions that could be thrown/caught in the with
-the `try` function:
+### Exception Types
 
-- `exception`: This is the base exception. Catching `'exception'` allows to
-  catch everything that can be caught, but like everywhere else, doing that
-  sounds like a bad idea.
-  - `value_exception`: This is the parent for any exception that occurs due to
-    an incorrect argument value provided to a built-in function
-    - `unknown_item`, `unknown_block`, `unknown_biome`, `unknown_sound`,
-      `unknown_particle`, `unknown_poi_type`, `unknown_dimension`,
-      `unknown_structure`, `unknown_criterion`: Specific errors thrown when a
-      specified internal name does not exist or is invalid.
-  - `io_exception`: This is the parent for any exception that occurs due to an
-    error handling external data.
-    - `nbt_error`: Incorrect input/output NBT file.
-    - `json_error`: Incorrect input/output JSON data.
-    - `b64_error`: Incorrect input/output b64 (base 64) string
-  - `user_exception`: Exception thrown by default with `throw` function.
+### `exception`
 
-Synopsis:
+Base type for all exceptions. `'exception'` catches all exceptions that can be
+caught.
+
+#### `value_exception`
+
+These exceptions are thrown if an invalid value is passed to a built-in
+function.
+
+- `unknown_item`
+- `unknown_block`
+- `unknown_biome`
+- `unknown_sound`
+- `unknown_particle`
+- `unknown_poi_type`
+- `unknown_dimension`
+- `unknown_structure`
+- `unknown_criterion`
+
+#### `io_exception`
+
+This is the parent for any exception that occurs due to an error handling
+external data.
+
+- `nbt_error` Incorrect input/output NBT file.
+- `json_error` Incorrect input/output JSON data.
+- `b64_error` Incorrect input/output b64 (base 64) string
+
+#### `user_exception`
+
+Exception thrown by default with `throw` function.
+
+### Examples
 
 ```scarpet
 inner_call() -> (
@@ -79,7 +95,7 @@ outer_call() -> (
 );
 ```
 
-Producing:
+Produces:
 
 ```text
 {
