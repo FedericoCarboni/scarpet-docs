@@ -8,4 +8,7 @@
     {{ if $param.rest -}}...{{ end -}}
     {{ $param.name -}}
   {{ end -}})
+{{ end -}}
+{{ if .Params.operator -}}
+x {{ .Params.operator }} y
 {{ end -}}</code></pre>

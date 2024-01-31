@@ -1,4 +1,4 @@
 ---
-title: Math
+title: Operators
 kind: function
 ---
