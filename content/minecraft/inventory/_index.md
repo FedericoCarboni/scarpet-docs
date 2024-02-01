@@ -1,7 +1,7 @@
 ---
 title: Inventory
 kind: function
-order: 2
+order: 3
 ---
 
 Most functions in this category require inventory as the first argument.

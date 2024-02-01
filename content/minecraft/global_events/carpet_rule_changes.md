@@ -6,5 +6,6 @@ params:
   - name: new_value
 ---
 
-Triggered when a carpet mod rule is changed. It includes extension rules, not using default `/carpet` command,
-which will then be namespaced as `namespace:rule`.
+Triggered when a carpet mod rule is changed. It includes extension rules, not
+using default `/carpet` command, which will then be namespaced as
+`namespace:rule`.

@@ -1,5 +1,5 @@
 ---
 title: Entity
 kind: function
-order: 1
+order: 2
 ---

@@ -6,4 +6,5 @@ params:
   - name: z
 ---
 
-Called right before a chunk at the given coordinates is unloaded. `x` and `z` correspond to the lowest x and z coordinates in the chunk.
+Called right before a chunk at the given coordinates is unloaded. `x` and `z`
+correspond to the lowest x and z coordinates in the chunk.

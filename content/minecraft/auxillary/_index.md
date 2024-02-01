@@ -1,5 +1,5 @@
 ---
 title: Auxillary
 kind: function
-order: 5
+order: 6
 ---

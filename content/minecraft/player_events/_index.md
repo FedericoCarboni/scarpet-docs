@@ -1,7 +1,7 @@
 ---
 title: Player Events
 kind: callback
-order: 4
+order: 5
 ---
 
 These are triggered with a player context. For apps with a `'player'` scope,
