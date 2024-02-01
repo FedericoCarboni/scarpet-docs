@@ -3,4 +3,4 @@
   {{ $syntax := partial "syntax/syntax.html" . | plainify | htmlUnescape | strings.TrimLeft " " | strings.TrimRight " " -}}
   {{ $.Scratch.Add "index" (dict "title" .Title "contents" (.Plain | htmlUnescape) "syntax" $syntax  "permalink" .Permalink) -}}
 {{ end -}}
-{{ $.Scratch.Get "index" | jsonify }}
+{{ $.Scratch.Get "index" | jsonify (dict "noHTMLEscape" true) }}
