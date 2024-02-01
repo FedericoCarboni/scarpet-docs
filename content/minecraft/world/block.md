@@ -6,9 +6,9 @@ signatures:
       - name: x
       - name: "y"
       - name: z
+  - params:
+      - name: pos/state
 ---
-
-, `block([x,y,z])`, `block(state)`
 
 Returns either a block from specified location, or block with a specific state
 (as used by `/setblock` command), so allowing for block properties, block entity

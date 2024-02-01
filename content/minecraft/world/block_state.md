@@ -4,9 +4,10 @@ name: block_state
 signatures:
   - params:
       - name: block
+  - params:
+      - name: block
+      - name: property
 ---
-
-, `block_state(block, property)`
 
 If used with a `block` argument only, it returns a map of block properties and
 their values. If a block has no properties, returns an empty map.

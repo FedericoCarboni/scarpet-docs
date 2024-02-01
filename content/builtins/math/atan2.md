@@ -8,4 +8,4 @@ signatures:
 ---
 
 Returns the angle _theta_ from the conversion of rectangular coordinates (x, y)
-to polar coordinates (r, _theta_).
+to polar coordinates (r, _theta_). Return value is in **degrees**.

@@ -2,8 +2,12 @@
 title: block_tags()
 name: block_tags
 signatures:
+  - params: []
   - params:
-      - name: ""
+      - name: block
+  - params:
+      - name: block
+      - name: tag
 ---
 
 , `block_tags(block)`, `block_tags(block, tag)`

@@ -2,11 +2,13 @@
 title: biome()
 name: biome
 signatures:
+  - params: []
   - params:
-      - name: ""
+      - name: pos/name/noise_map
+  - params:
+      - name: pos/name
+      - name: feature
 ---
-
-`biome(name)` `biome(block)` `biome(block/name, feature)`, `biome(noise_map)`
 
 Without arguments, returns the list of biomes in the world.
 

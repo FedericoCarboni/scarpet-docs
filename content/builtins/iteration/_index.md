@@ -1,3 +1,4 @@
 ---
 title: Iteration
+kind: function
 ---
