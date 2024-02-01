@@ -1,8 +1,5 @@
 <div class="sidebar flex-shrink-0 px-3">
-  <div class="overflow-y-auto position-fixed h-100" style="width: 220px">
-    <div class="search-area">
-      <form action=""></form>
-    </div>
+  <div class="sidebar-sections position-fixed overflow-y-auto h-100">
     <ul class="list-unstyled ps-0">
       {{ $page := .Page }}
       {{ $currentSection := .CurrentSection }}
@@ -19,7 +16,9 @@
         {{ $id := printf "sidebar-%d" $index -}}
         <li class="mb-1">
           <button
-            class="btn btn-toggle align-items-center rounded{{ if ne $currentSection . }} collapsed{{ end }}"
+            class="btn btn-toggle align-items-center rounded{{ if ne $currentSection . }}
+              collapsed
+            {{ end }}"
             data-bs-toggle="collapse"
             data-bs-target="#{{ $id }}"
             aria-expanded="{{ eq $currentSection . }}"
@@ -27,7 +26,7 @@
             {{ or $sect.Title $sect.RelPermalink }}
           </button>
           <div
-            class="collapse {{ if eq $currentSection . }}show{{ end }}"
+            class="collapse{{ if eq $currentSection . }}show{{ end }}"
             id="{{ $id }}"
           >
             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
@@ -42,7 +41,9 @@
                 <li>
                   <a
                     href="{{ .RelPermalink }}"
-                    class="link-body-emphasis text-decoration-none rounded{{ if .Params.deprecated }} text-decoration-line-through{{ end }}{{ if eq $page . }} active{{ end }}"
+                    class="link-body-emphasis text-decoration-none rounded{{ if .Params.deprecated }}
+                      text-decoration-line-through
+                    {{ end }}{{ if eq $page . }}active{{ end }}"
                   >
                     {{ or .Title .RelPermalink }}
                   </a>
@@ -53,5 +54,23 @@
         </li>
       {{ end -}}
     </ul>
+  </div>
+  <div id="search-area" class="sidebar-search-area position-fixed container my-3">
+    <noscript>
+      Enable JavaScript to search
+    </noscript>
+    <input
+      class="form-control"
+      type="text"
+      id="search-input"
+      placeholder="Search"
+      aria-label="Search input"
+    />
+    <div id="search-area-error">
+      <!-- search.js will put content here if there is an error -->
+    </div>
+    <div id="search-area-results" class="list-group collapse">
+      <!-- search.js will populate this with results as needed -->
+    </div>
   </div>
 </div>

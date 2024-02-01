@@ -247,5 +247,29 @@ main {
 }
 
 .sidebar {
-  width: 240px;
+  width: 280px;
+}
+
+.french-quote-breadcrumb-divider {
+  --bs-breadcrumb-divider: '»';
+}
+
+.sidebar-sections {
+  margin-top: 5rem;
+  width: 260px;
+}
+
+.sidebar-search-area {
+  width: 260px;
+}
+
+#search-area-results {
+  z-index: 99999;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
