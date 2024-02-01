@@ -1,7 +1,35 @@
 {{ range .Site.RegularPages -}}
 {{ if or .Params.kind .CurrentSection.Params.kind }}
-{{ $data := dict "permalink" .Permalink "docs" (dict "markdown" .RawContent "plain" .Plain) "data" (dict "name" .Params.name "signatures" .Params.signatures "deprecated" .Params.deprecated) }}
-{{ $.Scratch.SetInMap (or .Params.kind .CurrentSection.Params.kind | printf "docdata-%s") .Params.name $data -}}
+{{ $markdown := .RawContent | chomp | strings.TrimLeft "\n" }}
+{{ $plain := .Plain | htmlUnescape | chomp }}
+{{ $data := dict
+  "permalink" .Permalink
+  "data" (dict "signatures" .Params.signatures "params" .Params.params "deprecated" .Params.deprecated)
+}}
+{{ if .Params.deprecated }}
+{{ $.Scratch.SetInMap "tmp" "deprecated" .Params.deprecated }}
+{{ end }}
+{{ if $markdown }}
+{{ $.Scratch.SetInMap "tmp" "markdown" $markdown }}
+{{ end }}
+{{ if ne .Params.params nil }}
+{{ $.Scratch.SetInMap "tmp" "params" .Params.params }}
+{{ end }}
+{{ $.Scratch.SetInMap "tmp" "permalink" .Permalink }}
+{{ if $plain }}
+{{ $.Scratch.SetInMap "tmp" "plain" $plain }}
+{{ end }}
+{{ if .Params.signatures }}
+{{ $.Scratch.SetInMap "tmp" "signatures" .Params.signatures }}
+{{ end }}
+{{ $.Scratch.SetInMap (or .Params.kind .CurrentSection.Params.kind | printf "docdata-%s") .Params.name ($.Scratch.Get "tmp") -}}
+{{ $.Scratch.Set "tmp" dict }}
 {{ end }}
 {{ end -}}
-{{ dict "constants" ($.Scratch.Get "docdata-const") "functions" ($.Scratch.Get "docdata-function") "callbacks" ($.Scratch.Get "docdata-callback") | jsonify }}
+{{ dict
+    "events" (sort .Site.Data.events)
+    "constants" ($.Scratch.Get "docdata-const")
+    "functions" ($.Scratch.Get "docdata-function")
+    "callbacks" ($.Scratch.Get "docdata-callback")
+  | jsonify (dict "noHTMLEscape" true)
+}}
