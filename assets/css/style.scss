@@ -251,11 +251,11 @@ main {
 }
 
 .french-quote-breadcrumb-divider {
-  --bs-breadcrumb-divider: '»';
+  --bs-breadcrumb-divider: "»";
 }
 
 .sidebar-sections {
-  margin-top: 5rem;
+  padding-top: 5rem;
   width: 260px;
 }
 
@@ -264,7 +264,7 @@ main {
 }
 
 #search-area-results {
-  z-index: 99999;
+  z-index: 10;
 }
 
 .line-clamp-2 {
