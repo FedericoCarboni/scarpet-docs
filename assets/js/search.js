@@ -7,7 +7,6 @@
     fuse = new Fuse(index, {
       keys: ["syntax", "contents"],
       includeMatches: true,
-      minMatchCharLength: 2,
     });
   }
   function onError() {
