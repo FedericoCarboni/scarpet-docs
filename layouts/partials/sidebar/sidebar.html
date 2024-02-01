@@ -26,7 +26,7 @@
             {{ or $sect.Title $sect.RelPermalink }}
           </button>
           <div
-            class="collapse{{ if eq $currentSection . }}show{{ end }}"
+            class="collapse{{ if eq $currentSection . }} show{{ end }}"
             id="{{ $id }}"
           >
             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
