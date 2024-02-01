@@ -9,6 +9,9 @@
       <header>
         <h1 id="content-title">
           {{ or .Title .RelPermalink }}
+          {{ if .Params.deprecated }}
+          <span class="badge bg-warning">Deprecated</span>
+          {{ end }}
         </h1>
       </header>
       <a

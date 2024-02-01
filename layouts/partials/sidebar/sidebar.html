@@ -12,7 +12,7 @@
       {{ if len .Sections | ne 0 }}
         {{ $sections = .Sections }}
       {{ end }}
-      {{ range $index, $sect := $sections -}}
+      {{ range $index, $sect := $sections.ByParam "order" -}}
         {{ $id := printf "sidebar-%d" $index -}}
         <li class="mb-1">
           <button

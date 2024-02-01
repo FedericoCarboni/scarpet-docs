@@ -2,8 +2,9 @@
   <article class="container">
     <h1>{{ .Title }}</h1>
     <div>{{ .Content }}</div>
-    {{ range .Sections }}
+    {{ range .Sections.ByParam "order" }}
       <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <p>{{ .Summary }}</p>
       <ul>
         {{ range .Pages }}
           <li>
