@@ -16,6 +16,6 @@ argument, it is used in place of the resulting map element, otherwise current
 element is skipped.
 
 ```scarpet
-map(range(10), _*_)  => [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-map(player('*'), _+' is stoopid') [gnembon is stoopid, herobrine is stoopid]
+map(range(10), _*_); // [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+map(player('*'), _+' is stoopid'); // ['gnembon is stoopid', 'herobrine is stoopid']
 ```

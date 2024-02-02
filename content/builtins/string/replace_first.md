@@ -28,8 +28,8 @@ prevent Scarpet from interpreting them. For example `'\w'` produces an error so
 ### Examples
 
 ```scarpet
-string = 'John doe\'s dog is cuter than Jane\'s dog';
-print(replace_first(string, 'dog', 'cat')); // John doe's cat is cuter than Jane's dog
+string = 'John\'s dog is cuter than Jane\'s dog';
+print(replace_first(string, 'dog', 'cat')); // John's cat is cuter than Jane's dog
 ```
 
 [Java `Pattern`]:

@@ -7,8 +7,6 @@ signatures:
       - name: args
 ---
 
-, `task_thread(executor, function, ... args)`
-
 Creates and runs a parallel task, returning the handle to the task object. Task
 will return the return value of the function when its completed, or will return
 `null` immediately if task is still in progress, so grabbing a value of a task

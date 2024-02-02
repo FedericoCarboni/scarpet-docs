@@ -17,6 +17,6 @@ to `break` or `continue`, it will be used from now on as a new value for the
 accumulator.
 
 ```scarpet
-reduce([1,2,3,4],_a+_,0)  => 10
-reduce([1,2,3,4],_a*_,1)  => 24
+reduce([1, 2, 3, 4], _a + _, 0); // 10
+reduce([1, 2, 3, 4], _a * _, 1); // 24
 ```

@@ -23,6 +23,8 @@ app engine will not forcefully remove your running tasks, so the tasks
 themselves need to properly react to the closing request.
 
 ```scarpet
-sleep(50); // wait for 50 milliseconds
-sleep(1000, print('Interrupted')); // waits for 1 second, outputs a message when thread is shut down.
+// Wait for 50 milliseconds
+sleep(50);
+// Waits for 1 second, outputs a message when thread is shut down.
+sleep(1000, print('Interrupted'));
 ```

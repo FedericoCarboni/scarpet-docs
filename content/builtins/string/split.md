@@ -19,11 +19,11 @@ separator is specified.
 Splitting a `null` value will return an empty list.
 
 ```scarpet
-split('foo') => [f, o, o]
-split('','foo')  => [f, o, o]
-split('.','foo.bar')  => []
-split('\\.','foo.bar')  => [foo, bar]
-split(1,[2,5,1,2,3,1,5,6]) => [[2,5],[2,3],[5,6]]
-split(1,[1,2,3,1,4,5,1] => [[], [2,3], [4,5], []]
-split(null) => []
+split('foo'); // ['f', 'o', 'o']
+split('', 'foo'); // ['f', 'o', 'o']
+split('.', 'foo.bar'); // []
+split('\\.', 'foo.bar'); // ['foo', 'bar']
+split(1, [2, 5, 1, 2, 3, 1, 5, 6]); // [[2, 5], [2, 3], [5, 6]]
+split(1, [1, 2, 3, 1, 4, 5, 1]; // [[], [2, 3], [4, 5], []]
+split(null); // []
 ```
