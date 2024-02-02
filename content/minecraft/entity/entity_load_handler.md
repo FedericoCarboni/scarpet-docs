@@ -3,11 +3,11 @@ title: entity_load_handler()
 name: entity_load_handler
 signatures:
   - params:
-      - name: descriptordescriptors
+      - name: descriptors
       - name: function
+      - name: args
+        rest: true
 ---
-
-, `entity_load_handler(descriptor / descriptors, call_name, ... args?)`
 
 Attaches a callback to trigger when any entity matching the following type /
 types is loaded in the game, allowing to grab a handle to an entity right when

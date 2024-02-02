@@ -5,14 +5,18 @@ signatures:
   - params:
       - name: pos
       - name: block
-      - name: property
-      - name: value
-      - name: ""
+      - name: properties
+        rest: true
+  - params:
+      - name: pos
+      - name: block
+      - name: properties
+  - params:
+      - name: pos
+      - name: block
+      - name: properties
       - name: block_data
 ---
-
-, `set(pos, block, [property?, value?, ...], block_data?)`,
-`set(pos, block, {property? -> value?, ...}, block_data?)`
 
 First argument for the `set` function is either a coord triple, list of three
 numbers, or a world localized block value. Second argument, `block`, is either

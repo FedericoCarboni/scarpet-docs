@@ -3,13 +3,15 @@ title: reset_chunk()
 name: reset_chunk
 signatures:
   - params:
-      - name: pos
+      - name: positions
+  - params:
+      - name: from
+      - name: to
 ---
 
-, `reset_chunk(from_pos, to_pos)`, `reset_chunk([pos, ...])` Removes and resets
-the chunk, all chunks in the specified area or all chunks in a list at once,
-removing all previous blocks and entities, and replacing it with a new
-generation. For all currently loaded chunks, they will be brought to their
+Removes and resets the chunk, all chunks in the specified area or all chunks in
+a list at once, removing all previous blocks and entities, and replacing it with
+a new generation. For all currently loaded chunks, they will be brought to their
 current generation status, and updated to the player. All chunks that are not in
 the loaded area, will only be generated to the `'structure_starts'` status,
 allowing to generate them fully as players are visiting them. Chunks in the area

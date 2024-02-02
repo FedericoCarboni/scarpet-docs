@@ -10,8 +10,6 @@ signatures:
       - name: tag
 ---
 
-, `block_tags(block)`, `block_tags(block, tag)`
-
 Without arguments, returns list of available tags, with block supplied (either
 by coordinates, or via block name), returns lost of tags the block belongs to,
 and if a tag is specified, returns `null` if tag is invalid, `false` if this

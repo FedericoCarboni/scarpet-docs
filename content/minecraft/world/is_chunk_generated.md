@@ -4,9 +4,10 @@ name: is_chunk_generated
 signatures:
   - params:
       - name: pos
+  - params:
+      - name: pos
+      - name: force
 ---
-
-, `is_chunk_generated(pos, force)`
 
 Returns `true` if the region file for the chunk exists, `false` otherwise. If
 optional force is `true` it will also check if the chunk has a non-empty entry

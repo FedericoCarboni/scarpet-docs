@@ -6,7 +6,6 @@ signatures:
       - name: inventory
       - name: slot
       - name: amount
-      - name: ""
 ---
 
 Drops the items from indicated inventory slot, like player that Q's an item or
@@ -16,6 +15,6 @@ to pick all the queued items from their inventory anyways. Returns size of the
 actual dropped items.
 
 ```scarpet
-inventory_drop(player(), 0, 1) => 1 // Q's one item on the ground
-inventory_drop(x,y,z, 0) => 64 // removed and spawned in the world a full stack of items
+inventory_drop(player(), 0, 1); // 1 Q's one item on the ground
+inventory_drop(x,y,z, 0); // 64 removed and spawned in the world a full stack of items
 ```

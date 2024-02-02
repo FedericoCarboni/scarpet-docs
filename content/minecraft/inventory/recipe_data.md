@@ -3,13 +3,13 @@ title: recipe_data()
 name: recipe_data
 signatures:
   - params:
-      - name: item
+      - name: recipe/item
+  - params:
+      - name: recipe/item
       - name: type
 ---
 
-, `recipe_data(recipe, type?)`
-
-returns all recipes matching either an `item`, or represent actual `recipe`
+Returns all recipes matching either an `item`, or represent actual `recipe`
 name. In vanilla datapack, for all items that have one recipe available, the
 recipe name is the same as the item name but if an item has multiple recipes,
 its direct name can be different.

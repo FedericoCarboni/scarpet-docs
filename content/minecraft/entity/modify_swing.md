@@ -5,8 +5,10 @@ signatures:
   - params:
       - name: entity
       - name: "'swing'"
+  - params:
+      - name: entity
+      - name: "'swing'"
+      - name: "'offhand'"
 ---
-
-`modify(e, 'swing', 'offhand')`
 
 Makes the living entity swing their required limb.

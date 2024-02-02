@@ -3,9 +3,25 @@ title: sound()
 name: sound
 signatures:
   - params: []
+  - params:
+      - name: name
+      - name: pos
+  - params:
+      - name: name
+      - name: pos
+      - name: volume
+  - params:
+      - name: name
+      - name: pos
+      - name: volume
+      - name: pitch
+  - params:
+      - name: name
+      - name: pos
+      - name: volume
+      - name: pitch
+      - name: mixer
 ---
-
-, `sound(name, pos, volume?, pitch?, mixer?)`
 
 Plays a specific sound `name`, at block or position `pos`, with optional
 `volume` and modified `pitch`, and under optional `mixer`. Default values for

@@ -6,10 +6,6 @@ signatures:
       - name: inventory
       - name: item
       - name: start_slot
-      - name: ""
-      - name: inventory_findinventory
-      - name: "null"
-      - name: start_slot
 ---
 
 Finds the first slot with a corresponding item in the inventory, or if queried

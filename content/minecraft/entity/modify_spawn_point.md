@@ -5,10 +5,29 @@ signatures:
   - params:
       - name: entity
       - name: "'spawn_point'"
+  - params:
+      - name: entity
+      - name: "'spawn_point'"
+      - name: pos
+  - params:
+      - name: entity
+      - name: "'spawn_point'"
+      - name: pos
+      - name: dimension
+  - params:
+      - name: entity
+      - name: "'spawn_point'"
+      - name: pos
+      - name: dimension
+      - name: angle
+  - params:
+      - name: entity
+      - name: "'spawn_point'"
+      - name: pos
+      - name: dimension
+      - name: angle
+      - name: forced
 ---
-
-, `modify(e, 'spawn_point', null)`,
-`modify(e, 'spawn_point', pos, dimension?, angle?, forced?)`
 
 Changes player respawn position to given position, optional dimension (defaults
 to current player dimension), angle (defaults to current player facing) and

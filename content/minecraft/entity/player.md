@@ -2,10 +2,9 @@
 title: player()
 name: player
 signatures:
+  - params: []
   - params:
-      - name: ""
-      - name: playertype
-      - name: playername
+      - name: name
 ---
 
 With no arguments, it returns the calling player or the player closest to the

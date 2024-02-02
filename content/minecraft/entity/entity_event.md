@@ -6,9 +6,9 @@ signatures:
       - name: e
       - name: event
       - name: function
+      - name: args
+        rest: true
 ---
-
-, `entity_event(e, event, call_name, ... args?)`
 
 Attaches specific function from the current package to be called upon the
 `event`, with extra `args` carried to the original required arguments for the

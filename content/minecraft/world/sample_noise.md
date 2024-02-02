@@ -2,11 +2,12 @@
 title: sample_noise()
 name: sample_noise
 signatures:
+  - params: []
   - params:
-      - name: ""
+      - name: pos
+      - name: types
+        rest: true
 ---
-
-, `sample_noise(pos, ... types?)` 1.18+
 
 Samples the world generation noise values / data driven density function(s) at a
 given position.

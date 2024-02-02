@@ -3,9 +3,9 @@ title: get_mob_counts()
 name: get_mob_counts
 signatures:
   - params: []
+  - params:
+      - name: category
 ---
-
-, `get_mob_counts(category)` 1.16+
 
 Returns either a map of mob categories with its respective counts and capacities
 (a.k.a. mobcaps) or just a tuple of count and limit for a specific category. If
