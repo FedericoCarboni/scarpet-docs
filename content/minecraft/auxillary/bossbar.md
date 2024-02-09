@@ -21,7 +21,6 @@ suggests:
         value:
           type: string
           values: [pink, blue, red, green, yellow, purple, white]
-
 ---
 
 Manage bossbars just like with the `/bossbar` command.
