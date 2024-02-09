@@ -22,6 +22,9 @@
 {{ if .Params.signatures }}
 {{ $.Scratch.SetInMap "tmp" "signatures" .Params.signatures }}
 {{ end }}
+{{ if .Params.suggests }}
+{{ $.Scratch.SetInMap "tmp" "suggests" .Params.suggests }}
+{{ end }}
 {{ $.Scratch.SetInMap (or .Params.kind .CurrentSection.Params.kind | printf "docdata-%s") .Params.name ($.Scratch.Get "tmp") -}}
 {{ $.Scratch.Set "tmp" dict }}
 {{ end }}
