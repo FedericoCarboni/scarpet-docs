@@ -4,11 +4,11 @@ name: destroy
 signatures:
   - params:
       - name: pos
-      - name: destroypos
-      - name: "1"
-      - name: destroypos
-      - name: "N"
-      - name: destroypos
+  - params:
+      - name: pos
+      - name: tool
+  - params:
+      - name: pos
       - name: tool
       - name: nbt
 ---

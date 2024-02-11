@@ -2,5 +2,6 @@
 title: pairs()
 name: pairs
 signatures:
-  - params: []
+  - params:
+      - name: map
 ---

@@ -4,7 +4,8 @@ name: structures
 signatures:
   - params:
       - name: pos
-      - name: structurespos
+  - params:
+      - name: pos
       - name: structure_name
 ---
 

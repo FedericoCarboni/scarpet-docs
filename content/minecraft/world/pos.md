@@ -3,8 +3,7 @@ title: pos()
 name: pos
 signatures:
   - params:
-      - name: block
-      - name: posentity
+      - name: block_or_entity
 ---
 
 Returns a triple of coordinates of a specified block or entity. Technically

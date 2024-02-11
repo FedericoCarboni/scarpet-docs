@@ -5,7 +5,8 @@ signatures:
   - params:
       - name: pos
       - name: structure_name
-      - name: set_structurepos
+  - params:
+      - name: pos
       - name: structure_name
       - name: "null"
 ---

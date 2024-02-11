@@ -4,7 +4,9 @@ name: sort
 signatures:
   - params:
       - name: list
-      - name: sortvalues
+  - params:
+      - name: args
+        rest: true
 ---
 
 Sorts in the default sortographical order either all arguments, or a list if its

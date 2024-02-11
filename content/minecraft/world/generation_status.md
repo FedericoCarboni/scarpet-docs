@@ -4,8 +4,10 @@ name: generation_status
 signatures:
   - params:
       - name: pos
-      - name: generation_statuspos
-      - name: "true"
+  - params:
+      - name: pos
+      - name: force_load
+        type: bool
 ---
 
 Returns generation status as per the ticket system. Can return any value from

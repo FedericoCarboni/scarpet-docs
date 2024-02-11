@@ -4,7 +4,20 @@ name: poi
 signatures:
   - params:
       - name: pos
-      - name: poipos
+  - params:
+      - name: pos
+      - name: radius
+  - params:
+      - name: pos
+      - name: radius
+      - name: type
+  - params:
+      - name: pos
+      - name: radius
+      - name: type
+      - name: status
+  - params:
+      - name: pos
       - name: radius
       - name: type
       - name: status

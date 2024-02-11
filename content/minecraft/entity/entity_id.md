@@ -3,8 +3,7 @@ title: entity_id()
 name: entity_id
 signatures:
   - params:
-      - name: uuid
-      - name: entity_idid
+      - name: id
 ---
 
 Fetching entities either by their ID obtained via `entity ~ 'id'`, which is
