@@ -100,7 +100,7 @@ enable_hidden_dimensions();
 Loot table example:
 
 ```scarpet
-script run create_datapack('silverfishes_drop_gravel', {
+create_datapack('silverfishes_drop_gravel', {
     'data' -> { 'minecraft' -> { 'loot_tables' -> { 'entities' -> { 'silverfish.json' -> {
         'type' -> 'minecraft:entity',
         'pools' -> [
@@ -124,7 +124,7 @@ script run create_datapack('silverfishes_drop_gravel', {
 Recipe example:
 
 ```scarpet
-script run create_datapack('craftable_cobwebs', {
+create_datapack('craftable_cobwebs', {
     'data' -> { 'scarpet' -> { 'recipes' -> { 'cobweb.json' -> {
         'type' -> 'crafting_shaped',
         'pattern' -> [
@@ -148,5 +148,5 @@ script run create_datapack('craftable_cobwebs', {
 Function example:
 
 ```scarpet
- script run create_datapack('example',{'data/test/functions/talk.mcfunction'->'say 1\nsay 2'})
+create_datapack('example', {'data/test/functions/talk.mcfunction' -> 'say 1\nsay 2'});
 ```
