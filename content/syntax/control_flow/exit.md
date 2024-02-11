@@ -7,5 +7,5 @@ signatures:
       - name: value
 ---
 
-It terminates entire program passing `expr` as the result of the program
-execution, or null if omitted.
+It terminates entire program passing `value` as the result of the program
+execution, or `null` if omitted.
