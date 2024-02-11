@@ -5,9 +5,11 @@ signatures:
   - params:
       - name: "n"
       - name: expr
+        binds: [_]
   - params:
       - name: "n"
       - name: expr
+        binds: [_]
       - name: exit
 ---
 
