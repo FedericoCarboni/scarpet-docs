@@ -9,10 +9,10 @@ signatures:
       - name: string
 ---
 
-Splits a string under `expr` by `separator` which can be a regular expression.
-If no separator is specified, it splits by characters.
+Splits a string by `separator` which can be a regular expression. If no
+separator is specified, it splits by characters.
 
-If `expr` is a list, it will split the list into multiple sublists by the
+If operating on a list, it will split the list into multiple sublists by the
 element (s) which equal `separator`, or which equal the empty string in case no
 separator is specified.
 

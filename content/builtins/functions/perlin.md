@@ -4,18 +4,21 @@ name: perlin
 signatures:
   - params:
       - name: x
-      - name: perlinx
+  - params:
+      - name: x
       - name: "y"
-      - name: perlinx
+  - params:
+      - name: x
       - name: "y"
       - name: z
-      - name: perlinx
+  - params:
+      - name: x
       - name: "y"
       - name: z
       - name: seed
 ---
 
-returns a noise value from `0.0` to `1.0` (roughly) for 1, 2 or 3 dimensional
+Returns a noise value from `0.0` to `1.0` (roughly) for 1, 2 or 3 dimensional
 coordinate. The default seed it samples from is `0`, but seed can be specified
 as a 4th argument as well. In case you need 1D or 2D noise values with custom
 seed, use `null` for `y` and `z`, or `z` arguments respectively.

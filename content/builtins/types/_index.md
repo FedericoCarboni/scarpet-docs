@@ -1,0 +1,4 @@
+---
+title: Types
+kind: function
+---

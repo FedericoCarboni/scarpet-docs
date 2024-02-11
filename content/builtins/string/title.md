@@ -13,3 +13,8 @@ Returns a new string representing the value of string converted to title case.
 ```scarpet
 print(title('heLlo wOrlD')); // 'Hello World'
 ```
+
+#### Notes
+
+Supplementary unicode characters are not handled. Java whitespace rules are
+used.
