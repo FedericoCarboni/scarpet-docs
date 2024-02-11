@@ -5,7 +5,7 @@ signatures:
   - params:
       - name: values
         rest: true
-syntax: '[...values]'
+syntax: "[...values]"
 ---
 
 Creates a list of values of the expressions passed as parameters. It can be used

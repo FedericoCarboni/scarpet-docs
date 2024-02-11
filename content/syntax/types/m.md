@@ -5,7 +5,7 @@ signatures:
   - params:
       - name: entries
         rest: true
-syntax: '{key -> value, ...entries}'
+syntax: "{key -> value, ...entries}"
 ---
 
 Creates and initializes a map with supplied keys, and values. If the arguments
