@@ -1,5 +1,5 @@
 ---
-title: number()
+title: Number
 name: number
 signatures:
   - params:

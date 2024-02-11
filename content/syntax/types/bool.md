@@ -1,9 +1,10 @@
 ---
-title: bool()
+title: Bool
 name: bool
 signatures:
   - params:
       - name: expr
+syntax: "true\nfalse"
 ---
 
 Returns a boolean context of the expression. Bool is also interpreting string

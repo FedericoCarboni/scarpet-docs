@@ -1,5 +1,5 @@
 ---
-title: str()
+title: String
 name: str
 signatures:
   - params:
