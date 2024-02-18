@@ -2,6 +2,7 @@
 title: game_tick()
 name: game_tick
 signatures:
+  - params: []
   - params:
       - name: mstime
 ---

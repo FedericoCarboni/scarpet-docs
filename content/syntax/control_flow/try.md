@@ -11,7 +11,8 @@ signatures:
       - name: expr
       - name: type
       - name: catch_expr
-      - rest: true
+      - name: catch_exprs
+        rest: true
 ---
 
 Evaluate an expression catching any exceptions thrown.

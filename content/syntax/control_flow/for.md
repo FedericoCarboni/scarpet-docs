@@ -14,7 +14,7 @@ Iterate over each item in an iterable value.
 `for()` takes two arguments, an iterable value such as a `list` or a `map`
 (iterates over the keys of the map), and an expression to evaluate for every
 item. The expression receives two bound variables `_` (value) and `_i` (current
-iteration number) are supplied to the expression.
+iteration number).
 
 ```scarpet
 for([1, 2, 3, 4, 5], print(_));

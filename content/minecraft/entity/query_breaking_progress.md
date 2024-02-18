@@ -20,7 +20,7 @@ longer to mine.
 
 [Video demo](https://youtu.be/zvEEuGxgCio)
 
-```py
+```scarpet
 global_blocks = {
   'oak_planks' -> 0,
   'obsidian' -> 1,

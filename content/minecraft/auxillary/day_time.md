@@ -2,6 +2,7 @@
 title: day_time()
 name: day_time
 signatures:
+  - params: []
   - params:
       - name: new_time
 ---

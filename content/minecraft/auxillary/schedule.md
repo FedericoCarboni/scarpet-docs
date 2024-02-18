@@ -6,6 +6,7 @@ signatures:
       - name: delay
       - name: function
       - name: args
+        rest: true
 ---
 
 Schedules a user defined function to run with a specified `delay` ticks of

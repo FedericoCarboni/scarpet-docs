@@ -3,8 +3,11 @@ title: encode_nbt()
 name: encode_nbt
 signatures:
   - params:
-      - name: expr
+      - name: value
+  - params:
+      - name: value
       - name: force
+        type: bool
 ---
 
 Encodes value of the expression as an NBT tag. By default (or when `force` is
