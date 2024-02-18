@@ -3,10 +3,11 @@
   "version": "0.1.0-dev",
   "main": "index.js",
   "type": "module",
+  "types": "index.d.ts",
   "exports": {
     ".": "./index.js"
   },
-  "files": [],
+  "files": ["index.d.ts"],
   "scripts": {
     "lint:md": "markdownlint-cli2 \"_*/*.md\" && prettier -c \"**/*.md\"",
     "prettier": "prettier -c --write \"**/*.md\" --write \"**/*.scss\" --write \"**/*.js\"",
