@@ -9,3 +9,6 @@ hugo_stats.json
 
 # Node.js modules
 node_modules/
+
+# Generated data for the NPM package
+/index.js
