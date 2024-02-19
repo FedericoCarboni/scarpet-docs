@@ -1,6 +1,6 @@
 {
   "name": "@federicocarboni/scarpet-docs",
-  "version": "0.1.0-dev",
+  "version": "0.1.1-dev",
   "main": "index.js",
   "type": "module",
   "types": "index.d.ts",
