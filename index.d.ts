@@ -39,9 +39,12 @@ export type Param = {
    */
   default?: string;
 };
+/**
+ * Suggested values for the item.
+ */
 export type SuggestionValues = {
   type?: string;
-  values: string[];
+  values?: string[];
 };
 export type Suggestion = {
   [name: string]: SuggestionValues;
