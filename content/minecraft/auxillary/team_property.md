@@ -5,42 +5,46 @@ signatures:
   - params:
       - name: team
       - name: property
+    suggests:
+      - property:
+          values:
+            - collisionRule
+            - color
+            - displayName
+            - prefix
+            - suffix
+            - friendlyFire
+            - seeFriendlyInvisibles
+            - nametagVisibility
+            - deathMessageVisibility
   - params:
       - name: team
       - name: property
       - name: value
-# Experiment: see if this is a good way to improve autocomplete
-suggests:
-  property:
-    type: string
-    values:
-      - collisionRule
-      - color
-      - displayName
-      - prefix
-      - suffix
-      - friendlyFire
-      - seeFriendlyInvisibles
-      - nametagVisibility
-      - deathMessageVisibility
-  value:
-    - type: string
-      values: [always, never, pushOtherTeams, pushOwnTeam]
-      when:
-        property:
-          type: string
+    suggests:
+      - property:
+          values:
+            - collisionRule
+            - color
+            - displayName
+            - prefix
+            - suffix
+            - friendlyFire
+            - seeFriendlyInvisibles
+            - nametagVisibility
+            - deathMessageVisibility
+      - property:
           values: [collisionRule]
-    - type: string
-      values: [always, never, hideForOtherTeams, hideForOwnTeam]
-      when:
-        property:
-          type: string
+        value:
+          values: [always, never, pushOtherTeams, pushOwnTeam]
+      - property:
           values: [nametagVisibility, deathMessageVisibility]
-    - type: bool
-      when:
-        property:
-          type: string
+        value:
+          values: [always, never, hideForOtherTeams, hideForOwnTeam]
+      - property:
           values: [friendlyFire, seeFriendlyInvisibles]
+        value:
+          type: bool
 ---
 
 Reads the `property` of the `team` if no `value` is specified. If a `value` is

@@ -5,6 +5,10 @@ signatures:
   - params: []
   - params:
       - name: name
+    suggests:
+      - name:
+          type: string
+          values: [all, "*"]
 ---
 
 With no arguments, it returns the calling player or the player closest to the

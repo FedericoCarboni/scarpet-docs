@@ -8,19 +8,41 @@ signatures:
   - params:
       - name: id
       - name: property
+    suggests:
+      - property:
+          values:
+            - color
+            - style
+            - value
+            - max
+            - name
+            - visible
+            - players
+            - add_player
+            - remove
   - params:
       - name: id
       - name: property
       - name: value
-suggests:
-  - property:
-      type: string
-      values: [name, players, add_player, remove]
-  - property:
-      color:
+    suggests:
+      - property:
+          values:
+            - color
+            - style
+            - value
+            - max
+            - name
+            - visible
+            - players
+            - add_player
+      - property:
+          values: [color]
         value:
-          type: string
           values: [pink, blue, red, green, yellow, purple, white]
+      - property:
+          values: [style]
+        value:
+          values: [progress, notched_6, notched_10, notched_12, notched_20]
 ---
 
 Manage bossbars just like with the `/bossbar` command.

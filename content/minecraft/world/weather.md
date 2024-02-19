@@ -5,10 +5,13 @@ signatures:
   - params: []
   - params:
       - name: type
-        suggest: [clear, rain, thunder]
+    suggests:
+      - type:
+          values: [clear, rain, thunder]
   - params:
       - name: type
-        suggest: [clear, rain, thunder]
+        type:
+          values: [clear, rain, thunder]
       - name: ticks
 ---
 
