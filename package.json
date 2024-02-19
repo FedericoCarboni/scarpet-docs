@@ -10,7 +10,7 @@
   "files": ["index.d.ts"],
   "scripts": {
     "lint:md": "markdownlint-cli2 \"_*/*.md\" && prettier -c \"**/*.md\"",
-    "prettier": "prettier -c --write \"**/*.md\" --write \"**/*.scss\" --write \"**/*.js\"",
+    "prettier": "prettier -c --write \"**/*.md\" --write \"**/*.scss\" --write \"**/*.js\" --write \"**/*.ts\"",
     "prepack": "hugo --minify && node scripts/genIndex.cjs"
   },
   "keywords": [],
